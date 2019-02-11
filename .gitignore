@@ -1,7 +1,7 @@
 # Grunt Build
 /node_modules/*
 *.json
-*old.html
+*index.html
 *.scss
 *.map
 *.sass-cache
