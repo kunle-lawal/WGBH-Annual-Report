@@ -149,7 +149,7 @@ table {
   border-spacing: 0; }
 
 nav {
-  border: 0px solid white;
+  border: 1px solid white;
   box-shadow: 1px 1px 10px #222;
   z-index: 3;
   width: 100%;
@@ -160,7 +160,7 @@ nav {
   display: flex;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
   nav .nav-title {
-    border: 0px solid red;
+    border: 1px solid red;
     line-height: 55px;
     font-size: 1.2vw;
     width: 30%;
@@ -178,7 +178,7 @@ nav {
     @media only screen and (max-width: 953px) {
       nav .mobile_button {
         display: block;
-        border: 0px solid red;
+        border: 1px solid red;
         position: absolute;
         right: 50px;
         top: 10px;
@@ -190,7 +190,7 @@ nav {
           background-color: white;
           margin: 6px 0; } }
   nav .nav-items {
-    border: 0px solid green;
+    border: 1px solid green;
     position: relative;
     top: 0;
     margin: auto;
@@ -212,7 +212,7 @@ nav {
       text-align: center;
       font-size: 1.2vw;
       line-height: 55px;
-      border: 0px solid blue;
+      border: 1px solid blue;
       display: inline-block; }
       @media only screen and (max-width: 953px) {
         nav .nav-items ul {
@@ -239,7 +239,7 @@ main {
   display: block; }
 
 section {
-  border: 0px solid black;
+  border: 1px solid black;
   width: 100%;
   min-height: 1000px;
   text-align: center; }
@@ -273,7 +273,7 @@ section {
     position: fixed;
     top: 0; }
   .hero-card {
-    border: 0px solid blue;
+    border: 1px solid blue;
     flex-direction: column;
     width: 25%;
     min-height: 100px;
@@ -290,7 +290,7 @@ section {
       font-size: 3vw;
       text-align: center;
       width: 100%;
-      border: 0px solid green; }
+      border: 1px solid green; }
       @media only screen and (max-width: 953px) {
         .hero-card h1 {
           font-size: 7vw; } }
@@ -299,23 +299,23 @@ section {
       font-size: 1.4vw;
       text-align: center;
       width: 100%;
-      border: 0px solid green; }
+      border: 1px solid green; }
       @media only screen and (max-width: 953px) {
         .hero-card p {
           font-size: 55px; } }
 
 /* Presidents Message */
 .presmsg {
-  border: 0px solid blue;
+  border: 1px solid blue;
   margin-top: 300px; }
   @media only screen and (max-width: 953px) {
     .presmsg {
       margin-top: 100px; } }
   .presmsg .sub-section {
-    border: 0px solid blue;
+    border: 1px solid blue;
     margin: 0 0 100px; }
     .presmsg .sub-section .wrapper {
-      border: 0px solid blue;
+      border: 1px solid blue;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 100px; }
@@ -325,13 +325,13 @@ section {
           width: 100%; } }
   .presmsg-left {
     width: 100%;
-    border: 0px solid yellow;
+    border: 1px solid yellow;
     text-align: right; }
     @media only screen and (max-width: 953px) {
       .presmsg-left {
         text-align: center; } }
     .presmsg-left h1 {
-      border: 0px solid red;
+      border: 1px solid red;
       margin-right: 100px;
       display: inline-block;
       text-align: left;
@@ -348,7 +348,7 @@ section {
           margin: auto;
           margin-bottom: 100px; } }
       .presmsg-left h1 hr {
-        border: 0px solid red;
+        border: 1px solid red;
         opacity: 1;
         position: absolute;
         left: 0;
@@ -361,7 +361,7 @@ section {
           .presmsg-left h1 hr {
             width: 70%; } }
     .presmsg-left p {
-      border: 0px solid red;
+      border: 1px solid red;
       display: inline-block;
       text-align: left;
       font-size: 24px;
@@ -376,13 +376,13 @@ section {
           margin-bottom: 80px; } }
   .presmsg-right {
     min-height: 100px;
-    border: 0px solid black;
+    border: 1px solid black;
     text-align: center; }
     .presmsg-right .photo {
       display: inline-block;
       height: 1000px;
       width: 100%;
-      border: 0px solid green;
+      border: 1px solid green;
       background-color: #6b9ae0;
       margin-bottom: 20px; }
       @media only screen and (min-width: 954px) and (max-width: 1257px) {
@@ -396,7 +396,7 @@ section {
       .presmsg-right .photo img {
         display: block; }
     .presmsg-right p {
-      border: 0px solid red;
+      border: 1px solid red;
       display: inline-block;
       font-size: 24px;
       line-height: 1.2;
@@ -410,7 +410,7 @@ section {
         .presmsg-right p {
           width: 80%; } }
     .presmsg-right .signitures {
-      border: 0px solid pink;
+      border: 1px solid pink;
       width: 100%;
       display: grid;
       grid-template-columns: 1fr 2fr;
@@ -429,11 +429,11 @@ section {
             display: inline-block;
             width: 50%; } }
       .presmsg-right .signitures-left {
-        border: 0px solid black; }
+        border: 1px solid black; }
         .presmsg-right .signitures-left img {
           height: 100px; }
       .presmsg-right .signitures-right {
-        border: 0px solid black; }
+        border: 1px solid black; }
         .presmsg-right .signitures-right img {
           height: 100px;
           width: 300px; }
@@ -445,13 +445,13 @@ section {
   margin-top: 100px;
   width: 100%; }
   .anchor_links .wrapper {
-    border: 0px solid green;
+    border: 1px solid green;
     margin-top: 200px; }
     @media only screen and (max-width: 953px) {
       .anchor_links .wrapper {
         width: 100%; } }
     .anchor_links .wrapper .links {
-      border: 0px solid red;
+      border: 1px solid red;
       text-align: center;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -482,7 +482,7 @@ section {
       .anchor_links .wrapper .links #hist {
         background-image: url(../../textures/DigiAR_2019_purple-texture.svg); }
       .anchor_links .wrapper .links .link {
-        border: 0px solid black;
+        border: 1px solid black;
         cursor: pointer;
         text-align: center;
         vertical-align: middle;
@@ -505,13 +505,13 @@ section {
             border-radius: 0px; } }
 
 .headline {
-  border: 0px solid black;
+  border: 1px solid black;
   margin-top: 100px; }
   .headline .wrapper {
-    border: 0px solid red;
+    border: 1px solid red;
     margin: 0 auto; }
   .headline .article {
-    border: 0px solid blue;
+    border: 1px solid blue;
     width: 100%;
     text-align: center; }
     .headline .article-slides {
@@ -519,7 +519,7 @@ section {
       min-width: 100%;
       width: 0; }
       .headline .article-slides .slide {
-        border: 0px solid red;
+        border: 1px solid red;
         background-size: cover;
         background-color: black; }
         .headline .article-slides .slide img {
@@ -529,7 +529,7 @@ section {
         .headline .article-slides {
           background-image: url(../../placeholder-images/headline_mobile1.svg); } }
     .headline .article .section {
-      border: 0px solid red;
+      border: 1px solid red;
       width: 60%;
       display: inline-block;
       text-align: center; }
@@ -537,7 +537,7 @@ section {
         .headline .article .section {
           width: 100%; } }
       .headline .article .section-header {
-        border: 0px solid black;
+        border: 1px solid black;
         display: inline-block;
         max-width: 45%;
         font-size: 60px; }
@@ -561,7 +561,7 @@ section {
           .headline .article .section hr {
             width: 80%; } }
       .headline .article .section-article {
-        border: 0px solid yellow;
+        border: 1px solid yellow;
         display: inline-block;
         width: 600px; }
         @media only screen and (max-width: 953px) {
@@ -576,7 +576,7 @@ section {
               font-size: 40px;
               text-align: left; } }
           .headline .article .section-article-item .indent_right {
-            border: 0px solid red;
+            border: 1px solid red;
             margin-left: 100px; }
             @media only screen and (min-width: 954px) and (max-width: 1257px) {
               .headline .article .section-article-item .indent_right {
@@ -585,7 +585,7 @@ section {
               .headline .article .section-article-item .indent_right {
                 margin-left: 0; } }
           .headline .article .section-article-item .indent_left {
-            border: 0px solid red;
+            border: 1px solid red;
             margin-right: 120px;
             margin-top: -450px; }
             @media only screen and (min-width: 954px) and (max-width: 1257px) {
@@ -597,7 +597,7 @@ section {
                 margin-right: 0;
                 margin-top: 0; } }
           .headline .article .section-article-item .blockquote {
-            border: 0px solid red;
+            border: 1px solid red;
             height: 440px;
             width: 440px;
             background-size: cover;
@@ -622,8 +622,9 @@ section {
             left: -400px; }
             @media only screen and (min-width: 954px) and (max-width: 1257px) {
               .headline .article .section-article-item .quote1 {
-                border: 0px solid red;
-                top: 0px; } }
+                border: 1px solid red;
+                top: 0;
+                left: 0; } }
             @media only screen and (max-width: 953px) {
               .headline .article .section-article-item .quote1 {
                 height: 640px;
@@ -645,7 +646,7 @@ section {
               .headline .article .section-article-item .quote2 {
                 display: none; } }
           .headline .article .section-article-item .quote_container {
-            border: 0px solid red;
+            border: 1px solid red;
             width: 100%;
             text-align: center; }
 
@@ -653,7 +654,7 @@ section {
 /* Archor Links 2
 /* ------------------------------- */
 .wgbh_overview .title {
-  border: 0px solid blue;
+  border: 1px solid blue;
   position: relative;
   top: 150px;
   text-align: center; }
@@ -668,7 +669,7 @@ section {
     .wgbh_overview .wrapper {
       width: 70%; } }
   .wgbh_overview .wrapper .links {
-    border: 0px solid red;
+    border: 1px solid red;
     width: 80%;
     text-align: center;
     display: grid;
@@ -690,13 +691,13 @@ section {
 /* Logo Farm
 /* ------------------------------- */
 .logo_farm {
-  border: 0px solid red;
+  border: 1px solid red;
   background-image: url(../../textures/DigiAR_2019_-logo-farm-background_mobile.svg); }
   .logo_farm .wrapper {
-    border: 0px solid blue;
+    border: 1px solid blue;
     margin-top: 100px; }
     .logo_farm .wrapper .logos {
-      border: 0px solid red;
+      border: 1px solid red;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
