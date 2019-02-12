@@ -5,7 +5,7 @@
             // console.log(scroll_element.scrollTop(), $(window).height());
             var curtain_height = $(".hero-window").height();
             console.log(curtain_height);
-            if (scroll_element.scrollTop() >= curtain_height){
+            if (document.scrollingElement.scrollTop >= curtain_height){
                 $(".hero-window").css({
                     "position": "relative",
                     "margin-top": curtain_height
@@ -15,6 +15,7 @@
                     "margin-top": -curtain_height
                 });
             } else {
+                // alert(curtain_height);
                 $(".hero-window").css({
                     "position": "fixed",
                     "margin-top": 0
