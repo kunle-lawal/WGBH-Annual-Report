@@ -620,14 +620,21 @@ section {
     width: 100%;
     text-align: center; }
     .headline .article-slides {
-      overflow: hidden;
-      min-width: 100%;
-      width: 0; }
-      .headline .article-slides .slide {
-        overflow: hidden; }
+      display: none; }
       @media only screen and (max-width: 953px) {
         .headline .article-slides {
-          background-image: url(../../placeholder-images/headline_mobile1.svg); } }
+          display: block; } }
+      .headline .article-slides .slide img {
+        width: 100%; }
+    .headline .article-collage {
+      max-width: 100%; }
+      @media only screen and (max-width: 953px) {
+        .headline .article-collage {
+          display: none; } }
+      .headline .article-collage .collage {
+        width: 100%; }
+        .headline .article-collage .collage img {
+          width: 100%; }
     .headline .article .section {
       margin-top: 100px;
       width: 60%;
