@@ -143,9 +143,9 @@ a {
   text-decoration: none; }
 
 h1 {
-  font-family: "Sree Krushnadevaraya", serif;
-  font-size: 65px;
-  line-height: 60px;
+  font-family: "Work Sans", serif;
+  font-size: 60px;
+  line-height: 65px;
   font-weight: 900; }
   @media only screen and (max-width: 953px) {
     h1 {
@@ -153,10 +153,10 @@ h1 {
       line-height: calc(55pt / 1.2); } }
 
 h2 {
-  font-family: "Sree Krushnadevaraya", serif;
+  font-family: "Work Sans", serif;
   font-size: 50pt;
   line-height: 55pt;
-  font-weight: 500; }
+  font-weight: 600; }
   @media only screen and (max-width: 953px) {
     h2 {
       font-size: calc(50pt / 1.2);
@@ -164,22 +164,29 @@ h2 {
 
 h3 {
   font-family: "Work Sans", serif;
-  font-size: 18pt;
-  line-height: 28pt;
-  font-weight: 700; }
+  font-size: 20pt;
+  line-height: 27pt;
+  font-weight: 500; }
   @media only screen and (max-width: 953px) {
     h3 {
-      font-size: calc(18pt * 1.5); } }
+      font-size: calc(20pt * 1.5); } }
 
 p {
-  font-family: "Work Sans", serif;
+  font-family: "Sree Krushnadevaraya", serif;
   font-size: 20pt;
-  line-height: 34pt; }
+  line-height: 27pt; }
+
+em {
+  font-style: italic; }
 
 nav {
   font-family: "Work Sans", serif;
-  font-size: 1.2vw;
+  letter-spacing: 1px;
+  font-size: 18pt;
   line-height: 55px; }
+  @media only screen and (min-width: 954px) and (max-width: 1257px) {
+    nav {
+      font-size: 1.4vw; } }
 
 .hero-card .card-item p {
   font-family: "Work Sans", serif;
@@ -188,8 +195,11 @@ nav {
 
 .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
   font-family: "Work Sans", serif;
-  font-size: 20pt;
+  font-size: 25pt;
   line-height: 40pt; }
+  @media only screen and (min-width: 954px) and (max-width: 1257px) {
+    .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
+      font-size: 1.4vw; } }
 
 .footer, .hero-card {
   display: flex;
@@ -209,11 +219,9 @@ nav {
   margin: 0 auto; }
 
 .footer {
-  border: 0px solid blue;
   min-height: 200px;
   background-color: whitesmoke; }
   .footer .wrapper {
-    border: 0px solid red;
     margin-top: 10px;
     background-color: white;
     display: grid;
@@ -224,10 +232,8 @@ nav {
         .footer .wrapper .visits {
           display: none; } }
     .footer .wrapper .footer-item {
-      border: 0px solid green;
       text-align: left; }
       .footer .wrapper .footer-item .info {
-        border: 0px solid gray;
         text-align: center; }
       .footer .wrapper .footer-item .credit {
         text-align: left; }
@@ -270,7 +276,6 @@ nav {
             color: white; }
 
 nav {
-  border: 0px solid white;
   box-shadow: 1px 1px 10px #222;
   z-index: 3;
   width: 100%;
@@ -281,7 +286,6 @@ nav {
   display: flex;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
   nav .nav-title {
-    border: 0px solid red;
     line-height: 55px;
     width: 30%;
     text-align: center; }
@@ -298,20 +302,17 @@ nav {
     @media only screen and (max-width: 953px) {
       nav .mobile_button {
         display: block;
-        border: 0px solid red;
         position: absolute;
         right: 50px;
         top: 10px;
         margin: auto;
         text-align: center; }
         nav .mobile_button div {
-          border: 0px solid blue;
           width: 45px;
           height: 4px;
           background-color: white;
           margin: 6px 0; } }
   nav .nav-items {
-    border: 0px solid green;
     position: relative;
     top: 0;
     margin: auto;
@@ -331,7 +332,6 @@ nav {
     nav .nav-items ul {
       width: 100%;
       text-align: center;
-      border: 0px solid blue;
       display: inline-block; }
       @media only screen and (max-width: 953px) {
         nav .nav-items ul {
@@ -339,7 +339,6 @@ nav {
           font-size: 20px;
           line-height: 90px; } }
       nav .nav-items ul li {
-        border: 0px solid red;
         display: inline-block;
         cursor: pointer;
         margin: auto 30px; }
@@ -352,7 +351,6 @@ main {
   display: block; }
 
 section {
-  border: 0px solid black;
   width: 100%;
   min-height: 1000px;
   text-align: center; }
@@ -383,7 +381,6 @@ section {
     position: fixed;
     top: 0; }
   .hero-card {
-    border: 0px solid blue;
     flex-direction: column;
     width: 500px;
     min-height: 250px;
@@ -397,7 +394,6 @@ section {
       .hero-card {
         width: 60%; } }
     .hero-card .card-item {
-      border: 0px solid green;
       margin: 10px auto;
       min-width: 400px; }
       .hero-card .card-item h1 {
@@ -412,166 +408,154 @@ section {
       float: right; }
 
 /* Presidents Message */
-.presmsg {
-  border: 0px solid blue; }
-  @media only screen and (max-width: 953px) {
-    .presmsg {
-      margin-top: 100px; } }
-  .presmsg .sub-section {
-    border: 0px solid green;
-    margin: 0 0 100px; }
-    .presmsg .sub-section .wrapper {
-      border: 0px solid blue;
-      margin-top: 300px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 100px; }
-      @media only screen and (min-width: 954px) and (max-width: 1257px) {
-        .presmsg .sub-section .wrapper {
-          grid-column-gap: 40px; } }
-      @media only screen and (max-width: 953px) {
-        .presmsg .sub-section .wrapper {
-          display: block;
-          width: 100%; } }
-  .presmsg-left {
-    width: 100%;
-    border: 0px solid yellow;
-    text-align: right; }
+@media only screen and (max-width: 953px) {
+  .presmsg {
+    margin-top: 100px; } }
+.presmsg .sub-section {
+  margin: 0 0 100px; }
+  .presmsg .sub-section .wrapper {
+    margin-top: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px; }
+    @media only screen and (min-width: 954px) and (max-width: 1257px) {
+      .presmsg .sub-section .wrapper {
+        grid-column-gap: 40px; } }
     @media only screen and (max-width: 953px) {
-      .presmsg-left {
-        text-align: center; } }
-    .presmsg-left h2 {
-      border: 0px solid red;
-      margin-right: 100px;
-      display: inline-block;
-      text-align: left;
-      width: 90%;
-      padding: 10px;
-      margin-bottom: 80px; }
-      @media only screen and (max-width: 953px) {
-        .presmsg-left h2 {
-          width: 70%;
-          padding: 0;
-          margin: auto;
-          margin-bottom: 100px;
-          text-align: center;
-          text-transform: uppercase; } }
-      .presmsg-left h2 hr {
-        border: 0px solid red;
-        opacity: 1;
-        position: absolute;
-        left: 0;
-        width: 50vw;
-        height: 25px;
-        background-color: #4765aa;
-        margin-top: 10px;
-        z-index: -1; }
-        @media only screen and (max-width: 953px) {
-          .presmsg-left h2 hr {
-            width: 70%; } }
-    .presmsg-left p {
-      border: 0px solid red;
-      display: inline-block;
-      text-align: left;
-      width: 100%; }
-      @media only screen and (max-width: 953px) {
-        .presmsg-left p {
-          width: 80%;
-          margin-bottom: 80px; } }
-  .presmsg-right {
-    min-height: 100px;
-    border: 0px solid black;
-    text-align: center; }
-    .presmsg-right .photo {
-      border: 0px solid green;
-      display: inline-block;
-      height: 1000px;
-      width: 100%;
-      background-color: #6b9ae0;
-      margin-bottom: 20px;
-      background-image: url(../../images/DigiAR-2019_dsktp-letter-img_v1.jpg);
-      background-repeat: no-repeat;
-      background-size: cover; }
-      @media only screen and (min-width: 954px) and (max-width: 1257px) {
-        .presmsg-right .photo {
-          height: 800px;
-          width: 90%; } }
-      @media only screen and (max-width: 953px) {
-        .presmsg-right .photo {
-          background-image: url(../../images/DigiAR-2019_dsktp-letter-img_v1.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          height: 100vh;
-          width: 100%; } }
-      .presmsg-right .photo img {
-        display: block; }
-    .presmsg-right p {
-      border: 0px solid red;
-      display: inline-block;
-      width: 100%;
-      text-align: left; }
-      @media only screen and (min-width: 954px) and (max-width: 1257px) {
-        .presmsg-right p {
-          width: 90%; } }
-      @media only screen and (max-width: 953px) {
-        .presmsg-right p {
-          width: 80%; } }
-    .presmsg-right .signitures {
-      border: 0px solid pink;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 30px;
-      margin-top: 50px; }
-      @media only screen and (max-width: 953px) {
-        .presmsg-right .signitures {
-          display: inline-block;
-          text-align: left;
-          width: 80%; } }
-      .presmsg-right .signitures .signiture {
+      .presmsg .sub-section .wrapper {
+        display: block;
+        width: 100%; } }
+.presmsg-left {
+  width: 100%;
+  text-align: right; }
+  @media only screen and (max-width: 953px) {
+    .presmsg-left {
+      text-align: center; } }
+  .presmsg-left h2 {
+    margin-right: 100px;
+    display: inline-block;
+    text-align: left;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 80px; }
+    @media only screen and (max-width: 953px) {
+      .presmsg-left h2 {
+        width: 70%;
+        padding: 0;
+        margin: auto;
+        margin-bottom: 100px;
         text-align: center;
-        display: inline-block; }
-        @media only screen and (max-width: 953px) {
-          .presmsg-right .signitures .signiture {
-            display: inline-block;
-            width: 90%;
-            text-align: justify; } }
-        .presmsg-right .signitures .signiture * {
-          text-align: left; }
-        .presmsg-right .signitures .signiture h3 {
-          border: 0px solid red; }
-      .presmsg-right .signitures-left {
-        border: 0px solid blue; }
-        .presmsg-right .signitures-left img {
-          height: 100px; }
-          @media only screen and (max-width: 953px) {
-            .presmsg-right .signitures-left img {
-              height: 200px; } }
-      .presmsg-right .signitures-right {
-        border: 0px solid red; }
-        .presmsg-right .signitures-right img {
-          height: 100px;
-          width: 300px; }
-          @media only screen and (min-width: 954px) and (max-width: 1257px) {
-            .presmsg-right .signitures-right img {
-              width: 100%; } }
-          @media only screen and (max-width: 953px) {
-            .presmsg-right .signitures-right img {
-              height: 200px;
-              width: 400px; } }
+        text-transform: uppercase; } }
+    .presmsg-left h2 hr {
+      opacity: 1;
+      position: absolute;
+      left: 0;
+      width: 50vw;
+      height: 25px;
+      background-color: #4765aa;
+      margin-top: 10px;
+      z-index: -1; }
+      @media only screen and (max-width: 953px) {
+        .presmsg-left h2 hr {
+          width: 70%; } }
+  .presmsg-left p {
+    display: inline-block;
+    text-align: left;
+    width: 100%; }
+    @media only screen and (max-width: 953px) {
+      .presmsg-left p {
+        width: 80%;
+        margin-bottom: 80px; } }
+.presmsg-right {
+  min-height: 100px;
+  text-align: center; }
+  .presmsg-right .photo {
+    display: inline-block;
+    height: 1000px;
+    width: 100%;
+    background-color: #6b9ae0;
+    margin-bottom: 20px;
+    background-image: url(../../images/DigiAR-2019_dsktp-letter-img_v1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; }
+    @media only screen and (min-width: 954px) and (max-width: 1257px) {
+      .presmsg-right .photo {
+        height: 800px;
+        width: 90%; } }
+    @media only screen and (max-width: 953px) {
+      .presmsg-right .photo {
+        background-image: url(../../images/mobile/DigiAR-2019_mobile-letter-img_v1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%; } }
+    .presmsg-right .photo img {
+      display: block; }
+  .presmsg-right p {
+    display: inline-block;
+    width: 100%;
+    text-align: left; }
+    @media only screen and (min-width: 954px) and (max-width: 1257px) {
+      .presmsg-right p {
+        width: 90%; } }
+    @media only screen and (max-width: 953px) {
+      .presmsg-right p {
+        width: 80%; } }
+  .presmsg-right .signitures {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    margin-top: 50px; }
+    @media only screen and (max-width: 953px) {
+      .presmsg-right .signitures {
+        display: inline-block;
+        text-align: left;
+        width: 80%; } }
+    .presmsg-right .signitures .signiture {
+      text-align: center;
+      display: inline-block; }
+      @media only screen and (max-width: 953px) {
+        .presmsg-right .signitures .signiture {
+          display: inline-block;
+          width: 90%;
+          text-align: justify; } }
+      .presmsg-right .signitures .signiture * {
+        text-align: left; }
+    .presmsg-right .signitures-left .img {
+      background-image: url(../../signatures/jonsig_AR.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100px; }
+      @media only screen and (max-width: 953px) {
+        .presmsg-right .signitures-left .img {
+          height: 200px; } }
+    .presmsg-right .signitures-right .img {
+      background-image: url(../../signatures/RichardBurnes_Sig.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100px;
+      width: 300px; }
+      @media only screen and (min-width: 954px) and (max-width: 1257px) {
+        .presmsg-right .signitures-right .img {
+          width: 100%; } }
+      @media only screen and (max-width: 953px) {
+        .presmsg-right .signitures-right .img {
+          height: 200px;
+          width: 400px; } }
 
 /* anchor Links*/
 .anchor_links {
   margin-top: 100px;
   width: 100%; }
   .anchor_links .wrapper {
-    border: 0px solid green;
     margin-top: 200px; }
     @media only screen and (max-width: 953px) {
       .anchor_links .wrapper {
         width: 100%; } }
     .anchor_links .wrapper .links {
-      border: 0px solid red;
       text-align: center;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -602,7 +586,6 @@ section {
       .anchor_links .wrapper .links #hist {
         background-image: url(../../textures/DigiAR_2019_purple-texture.svg); }
       .anchor_links .wrapper .links .link {
-        border: 0px solid black;
         cursor: pointer;
         background-repeat: no-repeat;
         background-size: cover;
@@ -611,14 +594,13 @@ section {
         line-height: 220px;
         padding: 20px; }
         .anchor_links .wrapper .links .link h3 {
-          border: 0px solid red;
           display: inline-block;
           vertical-align: middle;
           line-height: normal;
           color: white; }
           @media only screen and (max-width: 953px) {
             .anchor_links .wrapper .links .link h3 {
-              font-size: calc(18pt * 2);
+              font-size: calc(20pt * 2);
               font-weight: 500;
               width: 70%; } }
         @media only screen and (min-width: 954px) and (max-width: 1257px) {
@@ -629,13 +611,10 @@ section {
             border-radius: 0px; } }
 
 .headline {
-  border: 0px solid black;
   margin-top: 100px; }
   .headline .wrapper {
-    border: 0px solid red;
     margin: 0 auto; }
   .headline .article {
-    border: 0px solid blue;
     width: 100%;
     text-align: center; }
     .headline .article-slides {
@@ -643,17 +622,13 @@ section {
       min-width: 100%;
       width: 0; }
       .headline .article-slides .slide {
-        border: 0px solid red;
-        background-size: cover;
-        background-color: black; }
-        .headline .article-slides .slide img {
-          width: 100%;
-          height: 1000px; }
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; }
       @media only screen and (max-width: 953px) {
         .headline .article-slides {
           background-image: url(../../placeholder-images/headline_mobile1.svg); } }
     .headline .article .section {
-      border: 0px solid red;
       margin-top: 100px;
       width: 60%;
       display: inline-block;
@@ -662,7 +637,6 @@ section {
         .headline .article .section {
           width: 100%; } }
       .headline .article .section-header {
-        border: 0px solid black;
         display: inline-block;
         width: 45%; }
         @media only screen and (min-width: 954px) and (max-width: 1257px) {
@@ -683,7 +657,6 @@ section {
           .headline .article .section hr {
             width: 80%; } }
       .headline .article .section-article {
-        border: 0px solid yellow;
         display: inline-block;
         width: 730px; }
         @media only screen and (max-width: 953px) {
@@ -695,7 +668,6 @@ section {
             .headline .article .section-article-item {
               text-align: left; } }
           .headline .article .section-article-item .indent_right {
-            border: 0px solid red;
             margin-left: 100px; }
             @media only screen and (min-width: 954px) and (max-width: 1257px) {
               .headline .article .section-article-item .indent_right {
@@ -704,7 +676,6 @@ section {
               .headline .article .section-article-item .indent_right {
                 margin-left: 0; } }
           .headline .article .section-article-item .indent_left {
-            border: 0px solid red;
             margin-right: 120px;
             margin-top: -450px; }
             @media only screen and (min-width: 954px) and (max-width: 1257px) {
@@ -716,7 +687,6 @@ section {
                 margin-right: 0;
                 margin-top: 0; } }
           .headline .article .section-article-item .blockquote {
-            border: 0px solid red;
             height: 440px;
             width: 440px;
             transition: all 0.4s;
@@ -740,7 +710,6 @@ section {
             left: -450px; }
             @media only screen and (min-width: 954px) and (max-width: 1257px) {
               .headline .article .section-article-item .quote1 {
-                border: 0px solid red;
                 top: 0;
                 left: 0; } }
             @media only screen and (max-width: 953px) {
@@ -764,7 +733,6 @@ section {
               .headline .article .section-article-item .quote2 {
                 display: none; } }
           .headline .article .section-article-item .quote_container {
-            border: 0px solid red;
             width: 100%;
             text-align: center; }
 
@@ -792,12 +760,10 @@ section {
 /*        SLICK DOTS               */
 /* ------------------------------- */
 .slick-dots {
-  border: 0px solid red;
   position: relative;
   top: -50px;
   /* more CSS */ }
   .slick-dots li {
-    border: 0px solid black;
     display: inline-block;
     text-align: center; }
     .slick-dots li button {
@@ -810,6 +776,7 @@ section {
       margin: auto 20px;
       border-radius: 100%;
       background-color: white;
+      border: 1px solid black;
       opacity: 0.8; }
 
 /* ------------------------------- */
@@ -818,7 +785,6 @@ section {
 .wgbh_overview {
   background-image: url(../../textures/DigiAR_2019_blue-texture.svg); }
   .wgbh_overview .title {
-    border: 0px solid blue;
     position: relative;
     top: 150px;
     text-align: center;
@@ -838,14 +804,14 @@ section {
         width: 80%;
         border-top: 30px solid white; } }
     .wgbh_overview .wrapper .links {
-      border: 0px solid red;
       width: 80%;
       text-align: center;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 30px;
       padding: 100px 0 100px 0;
-      mix-blend-mode: screen; }
+      mix-blend-mode: screen;
+      border: none; }
       @media only screen and (min-width: 954px) and (max-width: 1257px) {
         .wgbh_overview .wrapper .links {
           border-top: 0px solid transparent; } }
@@ -865,7 +831,7 @@ section {
           line-height: normal; }
           @media only screen and (max-width: 953px) {
             .wgbh_overview .wrapper .links .overview-link h3 {
-              font-size: calc(18pt * 2); } }
+              font-size: calc(20pt * 2); } }
         @media only screen and (max-width: 953px) {
           .wgbh_overview .wrapper .links .overview-link {
             margin: 40px auto;
@@ -878,15 +844,14 @@ section {
 /* Logo Farm
 /* ------------------------------- */
 .logo_farm {
-  border: 0px solid red;
   background-image: url(../../textures/DigiAR_2019_-logo-farm-background_mobile.svg);
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent; }
   .logo_farm .wrapper {
-    border: 0px solid blue;
     margin: 100px auto; }
     .logo_farm .wrapper .logos {
-      border: 0px solid red;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -902,8 +867,14 @@ section {
         width: calc(16.6% -10px);
         margin: 5px;
         float: left;
-        border: 1px solid white;
-        border-radius: 50%; }
+        border-radius: 30%;
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: all 0.7s;
+        border: 0px solid white;
+        top: 0px; }
+        .logo_farm .wrapper .logos .brand:hover {
+          background-color: rgba(255, 255, 255, 0);
+          opacity: 0.8; }
         @media only screen and (max-width: 953px) {
           .logo_farm .wrapper .logos .brand {
             width: 80%;

@@ -29,12 +29,12 @@
         });
 
         $(".article-slides").slick({
-            // arrows:true,
+            dots:true,
             prevArrow: false,
             nextArrow: false,
             infinite: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
+            // autoplay: true,
+            // autoplaySpeed: 2000,
         });
     });
 
