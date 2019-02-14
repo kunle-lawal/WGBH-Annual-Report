@@ -215,7 +215,7 @@ nav {
 
 .footer .wrapper, .presmsg .sub-section .wrapper, .anchor_links .wrapper, .logo_farm .wrapper {
   min-width: 100px;
-  width: 90%;
+  width: 80%;
   margin: 0 auto; }
 
 .footer {
@@ -368,8 +368,8 @@ section {
     @media only screen and (max-width: 953px) {
       .hero-curtain {
         background-image: url(../../images/mobile/DigiAR-2019_Mobile-Cover_v1.jpg);
-        background-size: contain;
         background-repeat: no-repeat;
+        background-size: cover;
         background-position: center center;
         width: 100vw; } }
   .hero-window {
@@ -404,8 +404,10 @@ section {
         font-weight: 900;
         text-align: center;
         width: 100%; }
-    .hero-card .quote span {
-      float: right; }
+    .hero-card .quote {
+      /* Person Quoted */ }
+      .hero-card .quote span {
+        float: right; }
 
 /* Presidents Message */
 @media only screen and (max-width: 953px) {
@@ -622,9 +624,7 @@ section {
       min-width: 100%;
       width: 0; }
       .headline .article-slides .slide {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center; }
+        overflow: hidden; }
       @media only screen and (max-width: 953px) {
         .headline .article-slides {
           background-image: url(../../placeholder-images/headline_mobile1.svg); } }

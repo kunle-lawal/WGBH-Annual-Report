@@ -33,8 +33,10 @@
             prevArrow: false,
             nextArrow: false,
             infinite: true,
-            // autoplay: true,
-            // autoplaySpeed: 2000,
+            fade: true,
+            speed: 1000,
+            autoplay: true,
+            autoplaySpeed: 2000,
         });
     });
 
