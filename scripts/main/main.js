@@ -38,6 +38,8 @@
             autoplay: true,
             autoplaySpeed: 2000,
         });
+
+        // lazyload();
     });
 
     $(document).ready(function () {

@@ -199,7 +199,7 @@ nav {
   line-height: 40pt; }
   @media only screen and (min-width: 954px) and (max-width: 1257px) {
     .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
-      font-size: 1.4vw; } }
+      font-size: 25pt; } }
 
 .footer, .hero-card {
   display: flex;
@@ -223,7 +223,6 @@ nav {
   background-color: whitesmoke; }
   .footer .wrapper {
     margin-top: 10px;
-    background-color: white;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr; }
     @media only screen and (max-width: 953px) {
@@ -232,16 +231,19 @@ nav {
         .footer .wrapper .visits {
           display: none; } }
     .footer .wrapper .footer-item {
-      text-align: left; }
+      text-align: left;
+      border-right: 2px inset #d2d2d2; }
+      @media only screen and (max-width: 953px) {
+        .footer .wrapper .footer-item {
+          margin: 30px auto;
+          border-right: none; } }
       .footer .wrapper .footer-item .info {
         text-align: center; }
       .footer .wrapper .footer-item .credit {
         text-align: left; }
         @media only screen and (max-width: 953px) {
           .footer .wrapper .footer-item .credit {
-            text-align: center; }
-            .footer .wrapper .footer-item .credit p {
-              display: none; } }
+            text-align: center; } }
       .footer .wrapper .footer-item .social-media {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -354,6 +356,9 @@ section {
   width: 100%;
   min-height: 1000px;
   text-align: center; }
+
+body {
+  background-color: snow; }
 
 /* Hero */
 .hero {
@@ -489,6 +494,7 @@ section {
         background-image: url(../../images/mobile/DigiAR-2019_mobile-letter-img_v1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         height: 100vh;
         width: 100%; } }
     .presmsg-right .photo img {
@@ -515,7 +521,7 @@ section {
         text-align: left;
         width: 80%; } }
     .presmsg-right .signitures .signiture {
-      text-align: center;
+      text-align: justify;
       display: inline-block; }
       @media only screen and (max-width: 953px) {
         .presmsg-right .signitures .signiture {
@@ -524,16 +530,16 @@ section {
           text-align: justify; } }
       .presmsg-right .signitures .signiture * {
         text-align: left; }
-    .presmsg-right .signitures-left .img {
+    .presmsg-right .signitures-left img {
       background-image: url(../../signatures/jonsig_AR.svg);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
       height: 100px; }
       @media only screen and (max-width: 953px) {
-        .presmsg-right .signitures-left .img {
+        .presmsg-right .signitures-left img {
           height: 200px; } }
-    .presmsg-right .signitures-right .img {
+    .presmsg-right .signitures-right img {
       background-image: url(../../signatures/RichardBurnes_Sig.svg);
       background-size: contain;
       background-repeat: no-repeat;
@@ -541,10 +547,10 @@ section {
       height: 100px;
       width: 300px; }
       @media only screen and (min-width: 954px) and (max-width: 1257px) {
-        .presmsg-right .signitures-right .img {
+        .presmsg-right .signitures-right img {
           width: 100%; } }
       @media only screen and (max-width: 953px) {
-        .presmsg-right .signitures-right .img {
+        .presmsg-right .signitures-right img {
           height: 200px;
           width: 400px; } }
 
@@ -594,7 +600,8 @@ section {
         text-align: center;
         vertical-align: middle;
         line-height: 220px;
-        padding: 20px; }
+        padding: 20px;
+        border-radius: 40px; }
         .anchor_links .wrapper .links .link h3 {
           display: inline-block;
           vertical-align: middle;
@@ -645,10 +652,10 @@ section {
           width: 100%; } }
       .headline .article .section-header {
         display: inline-block;
-        width: 45%; }
+        width: 60%; }
         @media only screen and (min-width: 954px) and (max-width: 1257px) {
           .headline .article .section-header {
-            min-width: 60%; } }
+            width: 80%; } }
         @media only screen and (max-width: 953px) {
           .headline .article .section-header {
             width: 70%; } }
@@ -675,7 +682,7 @@ section {
             .headline .article .section-article-item {
               text-align: left; } }
           .headline .article .section-article-item .indent_right {
-            margin-left: 100px; }
+            margin-left: 130px; }
             @media only screen and (min-width: 954px) and (max-width: 1257px) {
               .headline .article .section-article-item .indent_right {
                 margin-left: 0; } }
@@ -683,8 +690,7 @@ section {
               .headline .article .section-article-item .indent_right {
                 margin-left: 0; } }
           .headline .article .section-article-item .indent_left {
-            margin-right: 120px;
-            margin-top: -450px; }
+            margin-right: 140px; }
             @media only screen and (min-width: 954px) and (max-width: 1257px) {
               .headline .article .section-article-item .indent_left {
                 margin-right: 0;
@@ -697,51 +703,61 @@ section {
             height: 440px;
             width: 440px;
             transition: all 0.4s;
-            background-image: url(../../speech-bubbles/speech_bubble_1_lft.svg);
+            background-size: contain;
             background-repeat: no-repeat;
-            background-size: cover;
             background-position: center center;
             display: inline-block; }
             @media only screen and (max-width: 953px) {
               .headline .article .section-article-item .blockquote {
                 margin: auto;
                 width: 80vw; } }
+          .headline .article .section-article-item .quote_container {
+            width: 100%;
+            text-align: center; }
           .headline .article .section-article-item .first_quote {
-            display: block; }
+            position: initial;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-top: 40px; }
             @media only screen and (min-width: 1259px) and (max-width: 2000px) {
               .headline .article .section-article-item .first_quote {
-                display: none; } }
-          .headline .article .section-article-item .quote1 {
-            position: relative;
-            top: -420px;
-            left: -450px; }
-            @media only screen and (min-width: 954px) and (max-width: 1257px) {
-              .headline .article .section-article-item .quote1 {
-                top: 0;
-                left: 0; } }
+                position: relative;
+                top: 50px;
+                left: 50px;
+                margin-bottom: -440px;
+                margin-left: -500px; } }
             @media only screen and (max-width: 953px) {
-              .headline .article .section-article-item .quote1 {
-                height: calc(100vw * 1.2);
-                width: 90%;
-                top: 0;
-                left: 0; } }
-          .headline .article .section-article-item .quote2 {
-            display: block;
-            position: relative;
-            top: -370px;
-            left: 440px; }
+              .headline .article .section-article-item .first_quote .quote1 {
+                height: calc(100vw * 1.2); } }
+          .headline .article .section-article-item .second_quote {
+            display: none; }
             @media only screen and (min-width: 954px) and (max-width: 1257px) {
-              .headline .article .section-article-item .quote2 {
+              .headline .article .section-article-item .second_quote {
+                display: block;
+                margin-top: 40px; } }
+            @media only screen and (max-width: 953px) {
+              .headline .article .section-article-item .second_quote {
+                display: block;
+                position: initial;
+                margin-bottom: 0;
+                margin-left: 0;
+                margin-top: 40px; } }
+            @media only screen and (max-width: 953px) {
+              .headline .article .section-article-item .second_quote .quote1 {
+                height: calc(100vw * 1.2); } }
+          .headline .article .section-article-item .last_quote {
+            display: block;
+            margin-top: -400px;
+            margin-left: 450px; }
+            @media only screen and (min-width: 954px) and (max-width: 1257px) {
+              .headline .article .section-article-item .last_quote {
                 display: none;
                 top: 0;
                 left: 100px;
                 transform: rotateZ(180deg); } }
             @media only screen and (max-width: 953px) {
-              .headline .article .section-article-item .quote2 {
+              .headline .article .section-article-item .last_quote {
                 display: none; } }
-          .headline .article .section-article-item .quote_container {
-            width: 100%;
-            text-align: center; }
 
 .truth-transparency hr {
   background-image: url(../../textures/DigiAR_2019_redOrange-texture.svg);
@@ -790,7 +806,9 @@ section {
 /*        Archor Links 2           */
 /* ------------------------------- */
 .wgbh_overview {
-  background-image: url(../../textures/DigiAR_2019_blue-texture.svg); }
+  background-image: url(../../textures/DigiAR_2019_blue-texture_financials.svg);
+  background-repeat: no-repeat;
+  background-size: cover; }
   .wgbh_overview .title {
     position: relative;
     top: 150px;
@@ -821,21 +839,27 @@ section {
       border: none; }
       @media only screen and (min-width: 954px) and (max-width: 1257px) {
         .wgbh_overview .wrapper .links {
+          width: 100%;
           border-top: 0px solid transparent; } }
       @media only screen and (max-width: 953px) {
         .wgbh_overview .wrapper .links {
           display: block;
           width: 90%; } }
       .wgbh_overview .wrapper .links .overview-link {
+        min-width: 10px;
         text-align: center;
         vertical-align: middle;
         line-height: 220px;
         padding: 20px;
-        background-color: white; }
+        background-color: white;
+        border-radius: 40px; }
         .wgbh_overview .wrapper .links .overview-link h3 {
           display: inline-block;
           vertical-align: middle;
           line-height: normal; }
+          @media only screen and (min-width: 954px) and (max-width: 1257px) {
+            .wgbh_overview .wrapper .links .overview-link h3 {
+              font-size: 23px; } }
           @media only screen and (max-width: 953px) {
             .wgbh_overview .wrapper .links .overview-link h3 {
               font-size: calc(20pt * 2); } }
