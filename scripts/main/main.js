@@ -39,7 +39,9 @@
             autoplaySpeed: 2000,
         });
 
-        // lazyload();
+        $(function () {
+            $('.lazy').Lazy();
+        });
     });
 
     $(document).ready(function () {
