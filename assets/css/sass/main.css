@@ -140,7 +140,8 @@ table {
 /* P */
 /* social media size */
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
 
 h1 {
   font-family: "Work Sans", serif;
@@ -156,7 +157,7 @@ h2 {
   font-family: "Work Sans", serif;
   font-size: 50pt;
   line-height: 55pt;
-  font-weight: 600; }
+  font-weight: 700; }
   @media only screen and (max-width: 953px) {
     h2 {
       font-size: calc(50pt / 1.2);
@@ -166,7 +167,7 @@ h3 {
   font-family: "Work Sans", serif;
   font-size: 20pt;
   line-height: 27pt;
-  font-weight: 500; }
+  font-weight: 700; }
   @media only screen and (max-width: 953px) {
     h3 {
       font-size: calc(20pt * 1.5); } }
@@ -201,7 +202,7 @@ nav {
     .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
       font-size: 25pt; } }
 
-.footer, .hero-card, .headline .article .section-article-item .first_quote, .headline .article .section-article-item .second_quote, .headline .article .section-article-item .last_quote {
+.footer, .footer .wrapper .footer-item, .hero-card, .headline .article .section-article-item .first_quote, .headline .article .section-article-item .second_quote, .headline .article .section-article-item .last_quote {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -239,6 +240,9 @@ nav {
           border-right: none; } }
       .footer .wrapper .footer-item .info {
         text-align: center; }
+      .footer .wrapper .footer-item .visit img {
+        min-width: 10px;
+        height: 50px; }
       .footer .wrapper .footer-item .credit {
         text-align: left; }
         @media only screen and (max-width: 953px) {
@@ -262,7 +266,6 @@ nav {
           justify-self: center; }
           @media only screen and (max-width: 953px) {
             .footer .wrapper .footer-item .social-media .fa {
-              padding: calc(20px / 1.2);
               margin: auto 10px;
               border-radius: 100%; } }
           .footer .wrapper .footer-item .social-media .fa:hover {
@@ -285,8 +288,7 @@ nav {
   position: fixed;
   background-color: #222;
   color: white !important;
-  display: flex;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  display: flex; }
   nav .nav-title {
     line-height: 55px;
     width: 30%;
@@ -488,7 +490,8 @@ body {
     @media only screen and (min-width: 954px) and (max-width: 1257px) {
       .presmsg-right .photo {
         height: 800px;
-        width: 90%; } }
+        width: 90%;
+        background-position: center center; } }
     @media only screen and (max-width: 953px) {
       .presmsg-right .photo {
         background-image: url(../../images/mobile/DigiAR-2019_mobile-letter-img_v1.jpg);
@@ -586,13 +589,13 @@ body {
           display: block;
           border: 0px; } }
       .anchor_links .wrapper .links #jour {
-        background-image: url(../../textures/DigiAR_2019_teal-texture.svg); }
+        background-image: url(../../textures/DigiAR_2019_redOrange-texture.svg); }
       .anchor_links .wrapper .links #edu {
-        background-image: url(../../textures/DigiAR_2019_blue-texture.svg); }
+        background-image: url(../../textures/DigiAR_2019_purple-texture.svg); }
       .anchor_links .wrapper .links #sci {
         background-image: url(../../textures/DigiAR_2019_orange-texture.svg); }
       .anchor_links .wrapper .links #hist {
-        background-image: url(../../textures/DigiAR_2019_purple-texture.svg); }
+        background-image: url(../../textures/DigiAR_2019_teal-texture.svg); }
       .anchor_links .wrapper .links .link {
         cursor: pointer;
         background-repeat: no-repeat;
