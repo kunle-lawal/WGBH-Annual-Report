@@ -34,7 +34,7 @@
             nextArrow: false,
             infinite: true,
             fade: true,
-            speed: 1000,
+            speed: 500,
             autoplay: true,
             autoplaySpeed: 2000,
         });
@@ -53,7 +53,10 @@
         }, 4000);
 
         $(".mobile_button").click(function(){
-            $(".nav-items").toggleClass("slideInDown");
+            $(".nav-items-container").toggleClass("slideInDown");
+        });
+        $(".nav-items").click(function () {
+            $(".nav-items-container").toggleClass("slideInDown");
         });
     });
 

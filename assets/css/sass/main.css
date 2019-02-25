@@ -149,7 +149,7 @@ h1 {
   line-height: 65px;
   font-weight: 900;
   -webkit-text-size-adjust: none; }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 700px) {
     h1 {
       font-size: 50px;
       line-height: 54.1666666667px; } }
@@ -164,10 +164,10 @@ h2 {
     h2 {
       font-size: 45.4545454545pt;
       line-height: 50pt; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (min-width: 701px) and (max-width: 1257px) {
     h2 {
-      font-size: 41.6666666667pt;
-      line-height: 45.8333333333pt; } }
+      font-size: 35.7142857143pt;
+      line-height: 39.2857142857pt; } }
 
 h3 {
   font-family: "Work Sans", sans-serif;
@@ -178,7 +178,7 @@ h3 {
   @media only screen and (min-width: 1259px) and (max-width: 1440px) {
     h3 {
       font-size: 16.6666666667pt; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 700px) {
     h3 {
       font-size: 13.3333333333pt; } }
 
@@ -190,6 +190,10 @@ p {
   @media only screen and (min-width: 1259px) and (max-width: 1440px) {
     p {
       font-size: 16.6666666667pt; } }
+  @media only screen and (max-width: 700px) {
+    p {
+      font-size: 26pt;
+      line-height: 35.1pt; } }
 
 em {
   font-style: italic; }
@@ -202,7 +206,7 @@ nav {
   @media only screen and (min-width: 1259px) and (max-width: 1440px) {
     nav {
       font-size: 13pt; } }
-  @media only screen and (min-width: 801px) and (max-width: 1257px) {
+  @media only screen and (min-width: 701px) and (max-width: 1257px) {
     nav {
       font-size: 1.4vw; } }
 
@@ -218,7 +222,7 @@ nav {
   @media only screen and (min-width: 1259px) and (max-width: 1440px) {
     .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
       font-size: 20pt; } }
-  @media only screen and (min-width: 801px) and (max-width: 1257px) {
+  @media only screen and (min-width: 701px) and (max-width: 1257px) {
     .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
       font-size: 25pt; } }
 
@@ -238,6 +242,9 @@ nav {
   min-width: 100px;
   width: 80%;
   margin: 0 auto; }
+  @media only screen and (min-width: 701px) and (max-width: 1257px) {
+    .footer .wrapper, .presmsg .sub-section .wrapper, .anchor_links .wrapper, .logo_farm .wrapper {
+      width: 90%; } }
 
 .footer {
   min-height: 200px;
@@ -246,7 +253,7 @@ nav {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       .footer .wrapper {
         display: block; }
         .footer .wrapper .visits {
@@ -254,7 +261,7 @@ nav {
     .footer .wrapper .footer-item {
       text-align: left;
       border-right: 2px inset #d2d2d2; }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .footer .wrapper .footer-item {
           margin: 30px auto;
           border-right: none; } }
@@ -265,7 +272,7 @@ nav {
         height: 50px; }
       .footer .wrapper .footer-item .credit {
         text-align: left; }
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 700px) {
           .footer .wrapper .footer-item .credit {
             text-align: center; } }
       .footer .wrapper .footer-item .social-media {
@@ -273,7 +280,7 @@ nav {
         grid-template-columns: 1fr 1fr 1fr;
         margin: 10px auto;
         width: 80%; }
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 700px) {
           .footer .wrapper .footer-item .social-media {
             display: block;
             width: 50%; } }
@@ -284,7 +291,7 @@ nav {
           width: 20px;
           text-align: center;
           justify-self: center; }
-          @media only screen and (max-width: 800px) {
+          @media only screen and (max-width: 700px) {
             .footer .wrapper .footer-item .social-media .fa {
               margin: auto 10px;
               border-radius: 100%; } }
@@ -316,14 +323,14 @@ nav {
     nav .nav-title a {
       color: white;
       text-decoration: none; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       nav .nav-title {
         width: 50%;
-        font-size: 20px; } }
+        font-size: 18px !important; } }
   nav .mobile_button {
     display: none;
     cursor: pointer; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       nav .mobile_button {
         display: block;
         position: absolute;
@@ -336,56 +343,44 @@ nav {
           height: 4px;
           background-color: white;
           margin: 6px 0; } }
-  nav .nav-items {
+  nav .nav-items-container {
     position: relative;
     top: 0;
     margin: auto;
-    margin-right: 100px;
-    text-align: center;
+    margin-right: 10px;
+    text-align: left;
     float: right; }
-    @media only screen and (max-width: 800px) {
-      nav .nav-items {
+    @media only screen and (max-width: 700px) {
+      nav .nav-items-container {
         display: block;
         position: absolute;
         width: 100%;
         right: 0;
         top: -1000px;
         text-align: center;
-        background-color: black;
-        margin: auto; } }
-    nav .nav-items ul {
+        background-color: #222222f0;
+        margin: auto;
+        transition: all 0.6s; } }
+    nav .nav-items-container ul {
       width: 100%;
       text-align: center;
       display: inline-block; }
-      @media only screen and (max-width: 800px) {
-        nav .nav-items ul {
+      @media only screen and (max-width: 700px) {
+        nav .nav-items-container ul {
           display: block;
           font-size: 20px;
           line-height: 90px; } }
-      nav .nav-items ul li {
+      nav .nav-items-container ul li {
         display: inline-block;
         cursor: pointer;
         margin: auto 30px; }
-        @media only screen and (max-width: 800px) {
-          nav .nav-items ul li {
+        @media only screen and (max-width: 700px) {
+          nav .nav-items-container ul li {
             display: block; } }
 
 /*CSS ANIMATIONS*/
-@-webkit-keyframes slideInDown_ {
-  10% {
-    top: -100px; }
-  100% {
-    top: 56px; } }
-@keyframes slideInDown_ {
-  10% {
-    top: -100px; }
-  100% {
-    top: 56px; } }
 .slideInDown {
-  -webkit-animation-name: slideInDown_;
-  animation-name: slideInDown_;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards; }
+  top: 100% !important; }
 
 /* Scss Code starts here */
 main {
@@ -409,7 +404,7 @@ body {
     z-index: 2;
     box-shadow: 0px 10px 100px rgba(60, 60, 60, 0.6);
     background-image: url(../../images/hero.jpg); }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       .hero-curtain {
         background-image: url(../../images/mobile/DigiAR-2019_Mobile-Cover_v1.jpg);
         background-repeat: no-repeat;
@@ -431,10 +426,10 @@ body {
     padding: 70px;
     color: lighblue;
     background-color: white; }
-    @media only screen and (min-width: 801px) and (max-width: 1257px) {
+    @media only screen and (min-width: 701px) and (max-width: 1257px) {
       .hero-card {
         min-width: 20%; } }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       .hero-card {
         width: 60%; } }
     .hero-card .card-item {
@@ -454,7 +449,7 @@ body {
         float: right; }
 
 /* Presidents Message */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
   .presmsg {
     margin-top: 100px; } }
 .presmsg .sub-section {
@@ -464,17 +459,17 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 100px; }
-    @media only screen and (min-width: 801px) and (max-width: 1257px) {
+    @media only screen and (min-width: 701px) and (max-width: 1257px) {
       .presmsg .sub-section .wrapper {
-        grid-column-gap: 40px; } }
-    @media only screen and (max-width: 800px) {
+        grid-column-gap: 20px; } }
+    @media only screen and (max-width: 700px) {
       .presmsg .sub-section .wrapper {
         display: block;
         width: 100%; } }
 .presmsg-left {
   width: 100%;
   text-align: right; }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 700px) {
     .presmsg-left {
       text-align: center; } }
   .presmsg-left h2 {
@@ -484,14 +479,13 @@ body {
     width: 90%;
     padding: 10px;
     margin-bottom: 80px; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       .presmsg-left h2 {
         width: 70%;
         padding: 0;
         margin: auto;
         margin-bottom: 100px;
-        text-align: center;
-        text-transform: uppercase; } }
+        text-align: center; } }
     .presmsg-left h2 hr {
       opacity: 1;
       position: absolute;
@@ -502,14 +496,14 @@ body {
       margin-top: 10px;
       z-index: -1;
       background-image: url(../../textures/DigiAR_2019_blue-texture.svg); }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .presmsg-left h2 hr {
           width: 70%; } }
   .presmsg-left p {
     display: inline-block;
     text-align: left;
     width: 100%; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       .presmsg-left p {
         width: 80%;
         margin-bottom: 80px; } }
@@ -525,12 +519,12 @@ body {
     background-image: url(../../images/DigiAR-2019_dsktp-letter-img_v2.jpg);
     background-repeat: no-repeat;
     background-size: cover; }
-    @media only screen and (min-width: 801px) and (max-width: 1257px) {
+    @media only screen and (min-width: 701px) and (max-width: 1257px) {
       .presmsg-right .photo {
         height: 800px;
         width: 90%;
         background-position: center center; } }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       .presmsg-right .photo {
         background-image: url(../../images/mobile/DigiAR-2019_mobile-letter-img_v3.jpg);
         background-repeat: no-repeat;
@@ -544,10 +538,10 @@ body {
     display: inline-block;
     width: 100%;
     text-align: left; }
-    @media only screen and (min-width: 801px) and (max-width: 1257px) {
+    @media only screen and (min-width: 701px) and (max-width: 1257px) {
       .presmsg-right p {
         width: 90%; } }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       .presmsg-right p {
         width: 80%; } }
   .presmsg-right .signitures {
@@ -556,7 +550,12 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
     margin-top: 50px; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (min-width: 701px) and (max-width: 837px) {
+      .presmsg-right .signitures {
+        display: inline-block;
+        text-align: left;
+        width: 80%; } }
+    @media only screen and (max-width: 700px) {
       .presmsg-right .signitures {
         display: inline-block;
         text-align: left;
@@ -564,11 +563,10 @@ body {
     .presmsg-right .signitures .signiture {
       text-align: justify;
       display: inline-block; }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .presmsg-right .signitures .signiture {
           display: inline-block;
-          width: 90%;
-          text-align: justify; } }
+          width: 90%; } }
       .presmsg-right .signitures .signiture * {
         text-align: left; }
       .presmsg-right .signitures .signiture p {
@@ -578,7 +576,7 @@ body {
       background-repeat: no-repeat;
       background-position: center center;
       height: 100px; }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .presmsg-right .signitures-left img {
           height: 200px; } }
     .presmsg-right .signitures-right img {
@@ -586,10 +584,10 @@ body {
       background-position: center center;
       height: 100px;
       width: 300px; }
-      @media only screen and (min-width: 801px) and (max-width: 1257px) {
+      @media only screen and (min-width: 701px) and (max-width: 1257px) {
         .presmsg-right .signitures-right img {
-          width: 100%; } }
-      @media only screen and (max-width: 800px) {
+          width: 200px; } }
+      @media only screen and (max-width: 700px) {
         .presmsg-right .signitures-right img {
           height: 200px;
           width: 400px; } }
@@ -601,7 +599,7 @@ body {
   min-height: 700px !important; }
   .anchor_links .wrapper {
     margin-top: 200px; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       .anchor_links .wrapper {
         width: 100%; } }
     .anchor_links .wrapper .links {
@@ -612,7 +610,7 @@ body {
       padding: 100px 0 100px 0;
       border-top: 10px solid #3557a2;
       border-bottom: 10px solid #3557a2; }
-      @media only screen and (min-width: 801px) and (max-width: 1257px) {
+      @media only screen and (min-width: 701px) and (max-width: 1257px) {
         .anchor_links .wrapper .links {
           width: 100%;
           display: grid;
@@ -622,7 +620,7 @@ body {
           grid-row-gap: 10px;
           justify-content: center;
           align-items: center; } }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .anchor_links .wrapper .links {
           display: block;
           border: 0px; } }
@@ -648,15 +646,15 @@ body {
           vertical-align: middle;
           line-height: normal;
           color: white; }
-          @media only screen and (max-width: 800px) {
+          @media only screen and (max-width: 700px) {
             .anchor_links .wrapper .links .link h3 {
               font-size: calc(20pt * 2);
               font-weight: 500;
               width: 70%; } }
-        @media only screen and (min-width: 801px) and (max-width: 1257px) {
+        @media only screen and (min-width: 701px) and (max-width: 1257px) {
           .anchor_links .wrapper .links .link {
             height: 220px; } }
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 700px) {
           .anchor_links .wrapper .links .link {
             border-radius: 0px; } }
 
@@ -669,14 +667,14 @@ body {
     text-align: center; }
     .headline .article-slides {
       display: none; }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .headline .article-slides {
           display: block; } }
       .headline .article-slides .slide img {
         width: 100%; }
     .headline .article-collage {
       max-width: 100%; }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .headline .article-collage {
           display: none; } }
       .headline .article-collage .collage {
@@ -688,11 +686,11 @@ body {
       width: 60%;
       display: inline-block;
       text-align: center; }
-      @media only screen and (min-width: 801px) and (max-width: 1257px) {
+      @media only screen and (min-width: 701px) and (max-width: 1257px) {
         .headline .article .section {
           width: initial;
           min-width: 60%; } }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .headline .article .section {
           width: 100%; } }
       .headline .article .section-header {
@@ -701,10 +699,10 @@ body {
         @media only screen and (min-width: 1259px) and (max-width: 1440px) {
           .headline .article .section-header {
             width: 90%; } }
-        @media only screen and (min-width: 801px) and (max-width: 1257px) {
+        @media only screen and (min-width: 701px) and (max-width: 1257px) {
           .headline .article .section-header {
             width: 80%; } }
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 700px) {
           .headline .article .section-header {
             width: 70%; } }
       .headline .article .section hr {
@@ -715,32 +713,38 @@ body {
         margin-top: 25px;
         z-index: -1;
         margin-bottom: 100px; }
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 700px) {
           .headline .article .section hr {
             width: 80%; } }
       .headline .article .section-article {
         display: inline-block;
         width: 730px; }
-        @media only screen and (max-width: 800px) {
+        @media only screen and (min-width: 701px) and (max-width: 1257px) {
+          .headline .article .section-article {
+            width: 80%; } }
+        @media only screen and (max-width: 700px) {
           .headline .article .section-article {
             width: 80%; } }
         .headline .article .section-article-item {
           text-align: justify; }
+          @media only screen and (max-width: 700px) {
+            .headline .article .section-article-item {
+              text-align: left; } }
           .headline .article .section-article-item .indent_right {
             margin-left: 130px; }
-            @media only screen and (min-width: 801px) and (max-width: 1257px) {
+            @media only screen and (min-width: 701px) and (max-width: 1257px) {
               .headline .article .section-article-item .indent_right {
                 margin-left: 0; } }
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 700px) {
               .headline .article .section-article-item .indent_right {
                 margin-left: 0; } }
           .headline .article .section-article-item .indent_left {
             margin-right: 140px; }
-            @media only screen and (min-width: 801px) and (max-width: 1257px) {
+            @media only screen and (min-width: 701px) and (max-width: 1257px) {
               .headline .article .section-article-item .indent_left {
                 margin-right: 0;
                 margin-top: 0px; } }
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 700px) {
               .headline .article .section-article-item .indent_left {
                 margin-right: 0;
                 margin-top: 0; } }
@@ -758,21 +762,21 @@ body {
                 margin-bottom: -380px;
                 top: 20px;
                 left: 50px; } }
-            @media only screen and (min-width: 801px) and (max-width: 1257px) {
+            @media only screen and (min-width: 701px) and (max-width: 1257px) {
               .headline .article .section-article-item .first_quote {
                 position: initial;
                 margin-bottom: 10px;
                 margin-left: 0;
                 margin-top: 10px;
                 width: 100%; } }
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 700px) {
               .headline .article .section-article-item .first_quote {
                 position: initial;
                 margin-bottom: 0px;
                 margin-left: 0;
                 margin-top: 10px;
                 width: 100%; } }
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 700px) {
               .headline .article .section-article-item .first_quote .quote1 {
                 height: 100%; } }
             .headline .article .section-article-item .first_quote .quote1 img {
@@ -780,12 +784,12 @@ body {
               width: 100%; }
           .headline .article .section-article-item .second_quote {
             display: none; }
-            @media only screen and (min-width: 801px) and (max-width: 1257px) {
+            @media only screen and (min-width: 701px) and (max-width: 1257px) {
               .headline .article .section-article-item .second_quote {
                 display: block;
                 margin-top: 40px;
                 width: 100%; } }
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 700px) {
               .headline .article .section-article-item .second_quote {
                 display: block;
                 position: initial;
@@ -793,7 +797,7 @@ body {
                 margin-left: 0;
                 margin-top: 40px;
                 width: 100%; } }
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 700px) {
               .headline .article .section-article-item .second_quote .quote1 {
                 height: calc(100vw * 1.2); } }
             .headline .article .section-article-item .second_quote .quote1 img {
@@ -807,12 +811,12 @@ body {
               .headline .article .section-article-item .last_quote {
                 margin-top: -300px;
                 margin-left: 570px; } }
-            @media only screen and (min-width: 801px) and (max-width: 1257px) {
+            @media only screen and (min-width: 701px) and (max-width: 1257px) {
               .headline .article .section-article-item .last_quote {
                 display: none;
                 top: 0;
                 transform: rotateZ(180deg); } }
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 700px) {
               .headline .article .section-article-item .last_quote {
                 display: none; } }
             .headline .article .section-article-item .last_quote img {
@@ -829,7 +833,7 @@ body {
               .headline .article .section-article-item .blockquote {
                 height: 370px;
                 width: 370px; } }
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 700px) {
               .headline .article .section-article-item .blockquote {
                 margin: auto;
                 width: 80vw; } }
@@ -890,7 +894,7 @@ body {
     top: 150px;
     text-align: center;
     color: white; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       .wgbh_overview .title {
         display: inline-block;
         color: white;
@@ -900,7 +904,7 @@ body {
     justify-items: center;
     display: grid;
     border-top: 10px solid white; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 700px) {
       .wgbh_overview .wrapper {
         width: 80%;
         border-top: 30px solid white; } }
@@ -913,11 +917,11 @@ body {
       padding: 100px 0 100px 0;
       mix-blend-mode: screen;
       border: none; }
-      @media only screen and (min-width: 801px) and (max-width: 1257px) {
+      @media only screen and (min-width: 701px) and (max-width: 1257px) {
         .wgbh_overview .wrapper .links {
           width: 100%;
           border-top: 0px solid transparent; } }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .wgbh_overview .wrapper .links {
           display: block;
           width: 90%; } }
@@ -933,13 +937,13 @@ body {
           display: inline-block;
           vertical-align: middle;
           line-height: normal; }
-          @media only screen and (min-width: 801px) and (max-width: 1257px) {
+          @media only screen and (min-width: 701px) and (max-width: 1257px) {
             .wgbh_overview .wrapper .links .overview-link h3 {
               font-size: 23px; } }
-          @media only screen and (max-width: 800px) {
+          @media only screen and (max-width: 700px) {
             .wgbh_overview .wrapper .links .overview-link h3 {
               font-size: calc(20pt * 2); } }
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 700px) {
           .wgbh_overview .wrapper .links .overview-link {
             margin: 40px auto;
             height: 50vw;
@@ -965,7 +969,7 @@ body {
       grid-auto-columns: auto;
       grid-column-gap: 20px;
       grid-row-gap: 20px; }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .logo_farm .wrapper .logos {
           grid-template-columns: 1fr 1fr 1fr; } }
       .logo_farm .wrapper .logos .brand {
@@ -982,7 +986,7 @@ body {
         .logo_farm .wrapper .logos .brand:hover {
           background-color: rgba(255, 255, 255, 0);
           opacity: 0.8; }
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 700px) {
           .logo_farm .wrapper .logos .brand {
             width: 80%;
             justify-self: center; } }
