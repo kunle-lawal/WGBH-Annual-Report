@@ -500,7 +500,8 @@ body {
       height: 25px;
       background-color: #4765aa;
       margin-top: 10px;
-      z-index: -1; }
+      z-index: -1;
+      background-image: url(../../textures/DigiAR_2019_blue-texture.svg); }
       @media only screen and (max-width: 800px) {
         .presmsg-left h2 hr {
           width: 70%; } }
@@ -570,8 +571,10 @@ body {
           text-align: justify; } }
       .presmsg-right .signitures .signiture * {
         text-align: left; }
+      .presmsg-right .signitures .signiture p {
+        color: #236092;
+        font-family: "Work Sans", sans-serif; }
     .presmsg-right .signitures-left img {
-      background-image: url(../../signatures/jonsig_AR.svg);
       background-repeat: no-repeat;
       background-position: center center;
       height: 100px; }
@@ -579,7 +582,6 @@ body {
         .presmsg-right .signitures-left img {
           height: 200px; } }
     .presmsg-right .signitures-right img {
-      background-image: url(../../signatures/RichardBurnes_Sig.svg);
       background-repeat: no-repeat;
       background-position: center center;
       height: 100px;
@@ -595,7 +597,8 @@ body {
 /* anchor Links*/
 .anchor_links {
   margin-top: 100px;
-  width: 100%; }
+  width: 100%;
+  min-height: 700px !important; }
   .anchor_links .wrapper {
     margin-top: 200px; }
     @media only screen and (max-width: 800px) {
@@ -658,7 +661,7 @@ body {
             border-radius: 0px; } }
 
 .headline {
-  margin-top: 100px; }
+  margin-top: 300px; }
   .headline .wrapper {
     margin: 0 auto; }
   .headline .article {
@@ -709,7 +712,7 @@ body {
         width: 70%;
         height: 25px;
         background-color: #4765aa;
-        margin-top: 10px;
+        margin-top: 25px;
         z-index: -1;
         margin-bottom: 100px; }
         @media only screen and (max-width: 800px) {
