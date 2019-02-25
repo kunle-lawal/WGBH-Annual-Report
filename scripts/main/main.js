@@ -42,6 +42,19 @@
         $(function () {
             $('.lazy').Lazy();
         });
+
+        // Scroll Reveal Overview Section
+        window.sr = ScrollReveal();
+        sr.reveal('.brand', { duration: 500 }, 50);
+
+        // Animate Scroll down After Gradient Message Comes in
+        setTimeout(function () {
+            $('.scroll-down').addClass('animate');
+        }, 4000);
+
+        $(".mobile_button").click(function(){
+            $(".nav-items").toggleClass("slideInDown");
+        });
     });
 
     $(document).ready(function () {
