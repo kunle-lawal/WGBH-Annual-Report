@@ -343,7 +343,8 @@ nav {
       display: block; } }
   nav .mobile_nav {
     min-width: 10px;
-    margin: auto 0; }
+    margin: auto 0;
+    margin-left: 30px; }
     @media only screen and (max-width: 700px) {
       nav .mobile_nav {
         display: grid;
@@ -443,11 +444,14 @@ body {
     box-shadow: 0px 10px 100px rgba(60, 60, 60, 0.6);
     box-sizing: border-box;
     -webkit-animation: slide 30s linear infinite;
+    animation: slide 30s linear infinite;
     background: gray url(../../images/WGBH_AnnualReportCOVER.jpg) 0 0;
     background-repeat: no-repeat;
     background-size: cover; }
     @media only screen and (max-width: 700px) {
       .hero-curtain {
+        -webkit-animation: initial;
+        animation: initial;
         background-image: url(../../images/mobile/DigiAR-2019_Mobile-Cover_v1.jpg);
         background-size: contain;
         background-repeat: no-repeat;
