@@ -263,13 +263,24 @@ nav {
       border-right: 2px inset #d2d2d2; }
       @media only screen and (max-width: 700px) {
         .footer .wrapper .footer-item {
-          margin: 30px auto;
+          margin: 10px auto;
           border-right: none; } }
       .footer .wrapper .footer-item .info {
         text-align: center; }
+        .footer .wrapper .footer-item .info .logos {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 2fr; }
+          @media only screen and (max-width: 700px) {
+            .footer .wrapper .footer-item .info .logos {
+              display: block; } }
+          .footer .wrapper .footer-item .info .logos img {
+            height: 100px;
+            width: 100px;
+            display: inline-block; }
       .footer .wrapper .footer-item .visit img {
-        min-width: 10px;
-        height: 50px; }
+        width: 80%;
+        position: relative;
+        bottom: -20px; }
       .footer .wrapper .footer-item .credit {
         text-align: left; }
         @media only screen and (max-width: 700px) {
@@ -278,19 +289,21 @@ nav {
       .footer .wrapper .footer-item .social-media {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 10px;
         margin: 10px auto;
-        width: 80%; }
+        width: 100%; }
         @media only screen and (max-width: 700px) {
           .footer .wrapper .footer-item .social-media {
             display: block;
-            width: 50%; } }
+            width: 100%; } }
         .footer .wrapper .footer-item .social-media .fa {
-          border-radius: 18px;
+          border-radius: 5px;
           padding: calc(20px / 1.5);
           font-size: 20px;
           width: 20px;
           text-align: center;
-          justify-self: center; }
+          justify-self: center;
+          background-color: #222222; }
           @media only screen and (max-width: 700px) {
             .footer .wrapper .footer-item .social-media .fa {
               margin: auto 10px;
@@ -298,13 +311,10 @@ nav {
           .footer .wrapper .footer-item .social-media .fa:hover {
             opacity: 0.7; }
           .footer .wrapper .footer-item .social-media .fa-facebook {
-            background: #3B5998;
             color: white; }
           .footer .wrapper .footer-item .social-media .fa-twitter {
-            background: #55ACEE;
             color: white; }
           .footer .wrapper .footer-item .social-media .fa-instagram {
-            background: #125688;
             color: white; }
 
 nav {
@@ -407,10 +417,20 @@ body {
     @media only screen and (max-width: 700px) {
       .hero-curtain {
         background-image: url(../../images/mobile/DigiAR-2019_Mobile-Cover_v1.jpg);
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 100% 100%;
         width: 100vw; } }
+    .hero-curtain video {
+      height: 115vh;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      @media only screen and (max-width: 700px) {
+        .hero-curtain video {
+          display: none; } }
   .hero-window {
     background-image: url(../../images/DigiAR-2019_Intro-Bground_v1.png);
     background-repeat: no-repeat;
@@ -573,6 +593,7 @@ body {
         color: #236092;
         font-family: "Work Sans", sans-serif; }
     .presmsg-right .signitures-left img {
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
       height: 100px; }
@@ -580,6 +601,7 @@ body {
         .presmsg-right .signitures-left img {
           height: 200px; } }
     .presmsg-right .signitures-right img {
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
       height: 100px;
@@ -826,6 +848,7 @@ body {
             height: 440px;
             width: 440px;
             transition: all 0.4s;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
             display: inline-block; }
