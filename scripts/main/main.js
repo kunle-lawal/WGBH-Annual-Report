@@ -4,7 +4,10 @@
         $(document).scroll(function(){
             // console.log(scroll_element.scrollTop(), $(window).height());
             var curtain_height = $(".hero-window").height();
-            console.log(curtain_height);
+            var articlePos = [getOffSetVal(".truth-transparency"), getOffSetVal(".science"), getOffSetVal(".educating-youth"), getOffSetVal(".town-square")];
+
+            // console.log(articlePos);
+            // console.log(curtain_height);
             if (document.scrollingElement.scrollTop >= curtain_height){
                 $(".hero-window").css({
                     "position": "relative",
@@ -25,7 +28,39 @@
                     "margin-top": 0
                 });
             }
-        //   console.log($("html").scrollTop());
+
+            console.log(scroll_element.scrollTop(), articlePos[0]);
+            if (scroll_element.scrollTop() > getOffSetVal("#financial")) {
+                $("nav").css({
+                    "background-color": "#03507c",
+                    "color": "white"
+                });
+            } else if (scroll_element.scrollTop() > articlePos[3]) {
+                $("nav").css({
+                    "background-color": "#20b5bf",
+                    "color": "#222222"
+                });
+            } else if (scroll_element.scrollTop() > articlePos[2]) {
+                $("nav").css({
+                    "background-color": "#f7922a",
+                    "color": "#ffffff"
+                });
+            } else if (scroll_element.scrollTop() > articlePos[1]) {
+                $("nav").css({
+                    "background-color": "#6e3078",
+                    "color": "white"
+                });
+            } else if (scroll_element.scrollTop() > articlePos[0]) {
+                $("nav").css({
+                    "background-color": "#d83300",
+                    "color": "white"
+                });
+            } else if (scroll_element.scrollTop() > getOffSetVal(".link")) {
+                $("nav").css({
+                    "background-color": "#222222",
+                    "color": "white"
+                });
+            }
         });
 
         $(".article-slides").slick({
@@ -44,80 +79,24 @@
         });
 
         // Scroll Reveal Overview Section
-        window.sr = ScrollReveal();
-        sr.reveal('.brand', { duration: 500 }, 50);
+        // window.sr = ScrollReveal();
+        // sr.reveal('.brand', { duration: 500 }, 50);
 
         // Animate Scroll down After Gradient Message Comes in
-        setTimeout(function () {
-            $('.scroll-down').addClass('animate');
-        }, 4000);
+        // setTimeout(function () {
+        //     $('.scroll-down').addClass('animate');
+        // }, 4000);
 
         $(".mobile_button").click(function(){
             $(".nav-items-container").toggleClass("slideInDown");
         });
         $(".nav-items").click(function () {
-            $(".nav-items-container").toggleClass("slideInDown");
+            $(".slideInDown").toggleClass("slideInDown");
         });
     });
 
-    $(document).ready(function () {
 
-        var getMax = function () {
-            return $(document).height() - $(window).height();
-        }
-
-        var getValue = function () {
-            return $(window).scrollTop();
-        }
-
-        if ('max' in document.createElement('progress')) {
-            // Browser supports progress element
-            var progressBar = $('progress');
-
-            $(document).on('scroll', function () {
-                // On scroll only Value attr needs to be calculated
-                progressBar.attr({
-                    max: getMax(),
-                    value: getValue()
-                });
-            });
-
-            $(window).resize(function () {
-                // On resize, both Max/Value attr needs to be calculated
-                progressBar.attr({
-                    max: getMax(),
-                    value: getValue()
-                });
-            });
-        } else {
-            var progressBar = $('.progress-bar'),
-                max = getMax(),
-                value, width;
-
-            var getWidth = function () {
-                // Calculate width in percentage
-                value = getValue();
-                width = (value / max) * 100;
-                width = width + '%';
-                return width;
-            }
-
-            var setWidth = function () {
-                progressBar.css({
-                    width: getWidth()
-                });
-            }
-
-            $(document).on('scroll', function(){
-                max = getMax();
-                setWidth();
-            });
-            $(window).on('resize', function () {
-                // Need to reset the Max attr
-                max = getMax();
-                setWidth();
-            });
-        }
-    });
-
+    getOffSetVal = function(element) {
+        return $(element).offset().top;
+    }
 }());

@@ -144,18 +144,20 @@ a {
   color: inherit; }
 
 h1 {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans Bold", sans-serif;
   font-size: 60px;
   line-height: 65px;
   font-weight: 900;
-  -webkit-text-size-adjust: none; }
+  -webkit-text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
   @media only screen and (max-width: 700px) {
     h1 {
       font-size: 50px;
       line-height: 54.1666666667px; } }
 
 h2 {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans Bold", sans-serif;
   font-size: 50pt;
   line-height: 55pt;
   font-weight: 700;
@@ -170,7 +172,7 @@ h2 {
       line-height: 39.2857142857pt; } }
 
 h3 {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans Bold", sans-serif;
   font-size: 20pt;
   line-height: 27pt;
   font-weight: 700;
@@ -199,7 +201,7 @@ em {
   font-style: italic; }
 
 nav {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans Bold", sans-serif;
   letter-spacing: 1px;
   font-size: 18pt;
   line-height: 55px; }
@@ -211,12 +213,12 @@ nav {
       font-size: 1.4vw; } }
 
 .hero-card .card-item p {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans Bold", sans-serif;
   font-size: 20pt;
   line-height: 32pt; }
 
 .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans Bold", sans-serif;
   font-size: 25pt;
   line-height: 40pt; }
   @media only screen and (min-width: 1259px) and (max-width: 1440px) {
@@ -269,7 +271,8 @@ nav {
         text-align: center; }
         .footer .wrapper .footer-item .info .logos {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr 2fr; }
+          grid-template-columns: 1fr 1fr 1fr 2fr;
+          grid-column-gap: 20px; }
           @media only screen and (max-width: 700px) {
             .footer .wrapper .footer-item .info .logos {
               display: block; } }
@@ -277,6 +280,9 @@ nav {
             height: 100px;
             width: 100px;
             display: inline-block; }
+            @media only screen and (max-width: 700px) {
+              .footer .wrapper .footer-item .info .logos img {
+                margin: auto 5px; } }
       .footer .wrapper .footer-item .visit img {
         width: 80%;
         position: relative;
@@ -317,25 +323,42 @@ nav {
           .footer .wrapper .footer-item .social-media .fa-instagram {
             color: white; }
 
-nav {
-  box-shadow: 1px 1px 10px #222;
-  z-index: 3;
+.nav-wrapper {
+  position: absolute;
+  z-index: 1;
   width: 100%;
   min-height: 10px;
-  position: fixed;
+  position: fixed; }
+
+nav {
+  box-shadow: 1px 1px 10px #222;
+  height: 70px;
   background-color: #222;
-  color: white !important;
+  transition: background-color 0.7s;
+  color: white;
   display: flex; }
+  @media only screen and (max-width: 700px) {
+    nav {
+      height: 100px;
+      display: block; } }
+  nav .mobile_nav {
+    min-width: 10px;
+    margin: auto 0; }
+    @media only screen and (max-width: 700px) {
+      nav .mobile_nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: inherit; } }
   nav .nav-title {
     line-height: 55px;
-    width: 30%;
+    width: 100%;
     text-align: center; }
     nav .nav-title a {
-      color: white;
       text-decoration: none; }
     @media only screen and (max-width: 700px) {
       nav .nav-title {
-        width: 50%;
+        margin: auto 0;
+        width: initial;
         font-size: 18px !important; } }
   nav .mobile_button {
     display: none;
@@ -343,16 +366,15 @@ nav {
     @media only screen and (max-width: 700px) {
       nav .mobile_button {
         display: block;
-        position: absolute;
-        right: 50px;
-        top: 10px;
-        margin: auto;
-        text-align: center; }
+        margin: auto 0;
+        margin-left: 70%;
+        text-align: center;
+        justify-self: center; }
         nav .mobile_button div {
           width: 45px;
           height: 4px;
           background-color: white;
-          margin: 6px 0; } }
+          margin: 6px auto; } }
   nav .nav-items-container {
     position: relative;
     top: 0;
@@ -362,15 +384,16 @@ nav {
     float: right; }
     @media only screen and (max-width: 700px) {
       nav .nav-items-container {
+        z-index: -1;
         display: block;
-        position: absolute;
+        position: relative;
         width: 100%;
         right: 0;
-        top: -1000px;
+        top: -834px;
         text-align: center;
-        background-color: #222222f0;
+        background-color: inherit;
         margin: auto;
-        transition: all 0.6s; } }
+        transition: all 1s; } }
     nav .nav-items-container ul {
       width: 100%;
       text-align: center;
@@ -390,7 +413,7 @@ nav {
 
 /*CSS ANIMATIONS*/
 .slideInDown {
-  top: 100% !important; }
+  top: 0 !important; }
 
 /* Scss Code starts here */
 main {
@@ -405,6 +428,11 @@ body {
   background-color: white; }
 
 /* Hero */
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 0px -2000px; } }
 .hero {
   width: 100%;
   height: 100vh; }
@@ -413,7 +441,11 @@ body {
     height: 100%;
     z-index: 2;
     box-shadow: 0px 10px 100px rgba(60, 60, 60, 0.6);
-    background-image: url(../../images/hero.jpg); }
+    box-sizing: border-box;
+    -webkit-animation: slide 30s linear infinite;
+    background: gray url(../../images/WGBH_AnnualReportCOVER.jpg) 0 0;
+    background-repeat: no-repeat;
+    background-size: cover; }
     @media only screen and (max-width: 700px) {
       .hero-curtain {
         background-image: url(../../images/mobile/DigiAR-2019_Mobile-Cover_v1.jpg);
@@ -591,7 +623,7 @@ body {
         text-align: left; }
       .presmsg-right .signitures .signiture p {
         color: #236092;
-        font-family: "Work Sans", sans-serif; }
+        font-family: "Work Sans Bold", sans-serif; }
     .presmsg-right .signitures-left img {
       background-size: contain;
       background-repeat: no-repeat;

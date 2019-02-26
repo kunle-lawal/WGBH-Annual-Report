@@ -16,25 +16,34 @@
 </head>
 
 <body id="top">
-    <nav class="nav" style="color:white">
-
-        <div class="nav-title">
-            <a href="#top">WGBH ANNUAL REPORT 2019</a>
-        </div>
-
-        <div class="mobile_button">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <div class="nav-items-container">
-            <ul class="nav-items">
-                <a href="#pres"><li>PRESIDENT'S MESSAGE</li></a>
-                <a href="#stories"><li>STORIES</li></a>
-                <a href="#financial"><li>FINANCIALS</li></a>
-            </ul>
-        </div>
-    </nav>
+    <div class="nav-wrapper">
+        <nav class="nav" style="color:white">
+            <div class="mobile_nav">
+                <div class="nav-title">
+                    <a href="#top">WGBH ANNUAL REPORT 2019</a>
+                </div>
+                
+                <div class="mobile_button">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <div class="nav-items-container">
+                <ul class="nav-items">
+                    <a href="#pres">
+                        <li>PRESIDENT'S MESSAGE</li>
+                    </a>
+                    <a href="#stories">
+                        <li>STORIES</li>
+                    </a>
+                    <a href="#financial">
+                        <li>FINANCIALS</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <!-- Main page content goes in here -->
     <main>
@@ -761,22 +770,22 @@
                         <img src="assets/Logos/footer-logos/PBS_K.svg" alt="">
                         <img src="assets/Logos/footer-logos/NPR_K.svg" alt="">
                     </div>
-                    <h3>Ⓒ 2019 WGBH Educational Foundation.</h3>
+                    <h3>Ⓒ 2019 WGBH Educational Foundation</h3>
                 </div>
             </div>
             <div class="visits footer-item">
                 <div class="visit info">
                     <h3>VISIT US</h3>
-                    <img src="assets/Logos/footer-logos/WGBHorg_K_HZ.svg" alt="">
+                    <a href="https://www.wgbh.org"><img src="assets/Logos/footer-logos/WGBHorg_K_HZ.svg" alt=""></a>
                 </div>
             </div>
             <div class="socials footer-item">
                 <div class="social info">
                     <h3>FOLLOW US</h3>
                     <div class="social-media">
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="https://www.facebook.com/WGBHBoston/" class="fa fa-facebook"></a>
+                        <a href="https://twitter.com/wgbh" class="fa fa-twitter"></a>
+                        <a href="https://www.instagram.com/wgbh/" class="fa fa-instagram"></a>
 
                         <!-- <div class="fa fa-twitter"></div>
                         <div class="fa fa-facebook"></div>
@@ -797,25 +806,30 @@
     <!-- SMOOTH SCROLLING SCRIPT -->
     <script>
         $(document).ready(function () {
+            var clicked = true;
             // Add smooth scrolling to all links
             $("a").on('click', function (event) {
-
                 // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
+                if (this.hash !== "" && clicked) {
                     // Prevent default anchor click behavior
                     event.preventDefault();
-
+                    
                     // Store hash
                     var hash = this.hash;
-
+                    if($(hash).offset().top == $("html").scrollTop()) {
+                        return;
+                    }
+                    // console.log($(hash).offset().top, $("html").scrollTop());
                     // Using jQuery's animate() method to add smooth page scroll
                     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    clicked = false
                     $('html, body').animate({
-                        scrollTop: $(hash).offset().top
+                        scrollTop: $(hash).offset().top,
                     }, 800, function () {
 
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
+                        clicked = true;
                     });
                 } // End if
             });
