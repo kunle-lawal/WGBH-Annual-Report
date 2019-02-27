@@ -170,6 +170,10 @@ h2 {
     h2 {
       font-size: 35.7142857143pt;
       line-height: 39.2857142857pt; } }
+  @media only screen and (min-width: 701px) and (max-width: 1257px) {
+    h2 {
+      font-size: 38.4615384615pt;
+      line-height: 42.3076923077pt; } }
 
 h3 {
   font-family: "Work Sans Bold", sans-serif;
@@ -270,12 +274,10 @@ nav {
     grid-template-columns: 2fr 1fr 1fr; }
     @media only screen and (max-width: 700px) {
       .footer .wrapper {
-        display: block; }
-        .footer .wrapper .visits {
-          display: none; } }
+        display: block; } }
     .footer .wrapper .footer-item {
       text-align: left;
-      border-right: 2px inset #d2d2d2; }
+      border-right: 2px inset rgba(180, 178, 178, 0.6); }
       @media only screen and (max-width: 700px) {
         .footer .wrapper .footer-item {
           margin: 10px auto;
@@ -296,45 +298,53 @@ nav {
             @media only screen and (max-width: 700px) {
               .footer .wrapper .footer-item .info .logos img {
                 margin: auto 5px; } }
-      .footer .wrapper .footer-item .visit img {
-        width: 250px;
-        position: relative;
-        bottom: -20px; }
       .footer .wrapper .footer-item .credit {
         text-align: left; }
         @media only screen and (max-width: 700px) {
           .footer .wrapper .footer-item .credit {
             text-align: center; } }
-      .footer .wrapper .footer-item .social-media {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 10px;
-        margin: 10px auto;
-        width: 100%; }
-        @media only screen and (max-width: 700px) {
-          .footer .wrapper .footer-item .social-media {
-            display: block;
-            width: 100%; } }
-        .footer .wrapper .footer-item .social-media .fa {
-          border-radius: 5px;
-          padding: calc(20px / 1.5);
-          font-size: 20px;
-          width: 20px;
-          text-align: center;
-          justify-self: center;
-          background-color: #222222; }
+      .footer .wrapper .footer-item .visit {
+        display: inline-block; }
+        .footer .wrapper .footer-item .visit * {
+          display: block;
+          justify-self: center; }
+        .footer .wrapper .footer-item .visit img {
+          width: 250px;
+          margin-top: 28px; }
+      .footer .wrapper .footer-item .social {
+        display: inline-block; }
+        .footer .wrapper .footer-item .social .social-media {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-column-gap: 10px;
+          margin-top: 30px;
+          width: 100%; }
           @media only screen and (max-width: 700px) {
-            .footer .wrapper .footer-item .social-media .fa {
-              margin: auto 10px;
-              border-radius: 100%; } }
-          .footer .wrapper .footer-item .social-media .fa:hover {
-            opacity: 0.7; }
-          .footer .wrapper .footer-item .social-media .fa-facebook {
-            color: white; }
-          .footer .wrapper .footer-item .social-media .fa-twitter {
-            color: white; }
-          .footer .wrapper .footer-item .social-media .fa-instagram {
-            color: white; }
+            .footer .wrapper .footer-item .social .social-media {
+              display: block;
+              width: 100%; } }
+          .footer .wrapper .footer-item .social .social-media .fa {
+            border-radius: 5px;
+            padding: calc(20px / 1.5);
+            font-size: 20px;
+            width: 20px;
+            text-align: center;
+            justify-self: center;
+            background-color: #222222; }
+            @media only screen and (max-width: 700px) {
+              .footer .wrapper .footer-item .social .social-media .fa {
+                margin: auto 10px;
+                border-radius: 100%; } }
+            .footer .wrapper .footer-item .social .social-media .fa:hover {
+              opacity: 0.7; }
+            .footer .wrapper .footer-item .social .social-media .fa-facebook {
+              color: white; }
+            .footer .wrapper .footer-item .social .social-media .fa-twitter {
+              color: white; }
+            .footer .wrapper .footer-item .social .social-media .fa-instagram {
+              color: white; }
+    .footer .wrapper .socials {
+      border-right: none; }
 
 .nav-wrapper {
   z-index: 3;
@@ -589,7 +599,7 @@ body {
     margin-bottom: 80px; }
     @media only screen and (max-width: 700px) {
       .presmsg-left h2 {
-        width: 70%;
+        width: 90%;
         padding: 0;
         margin: auto;
         margin-bottom: 100px;
@@ -608,7 +618,8 @@ body {
       background-size: cover; }
       @media only screen and (max-width: 700px) {
         .presmsg-left h2 hr {
-          width: 70%; } }
+          width: 70%;
+          right: 0; } }
   .presmsg-left p {
     display: inline-block;
     text-align: left;
@@ -881,9 +892,9 @@ body {
             @media only screen and (min-width: 701px) and (max-width: 1257px) {
               .headline .article .section-article-item .first_quote {
                 position: initial;
-                margin-bottom: 10px;
+                margin-bottom: 100px;
                 margin-left: 0;
-                margin-top: 10px;
+                margin-top: 60px;
                 width: 100%; } }
             @media only screen and (max-width: 700px) {
               .headline .article .section-article-item .first_quote {
@@ -959,21 +970,57 @@ body {
   background-image: url(../../textures/DigiAR_2019_redOrange-texture.svg);
   background-repeat: no-repeat;
   background-size: cover; }
+@media screen and (min-width: 1259px) and (max-width: 1440px) {
+  .truth-transparency .first_quote {
+    top: 100px !important; } }
+@media screen and (min-width: 1259px) and (max-width: 1440px) {
+  .truth-transparency .last_quote {
+    margin-top: -250px !important; } }
+@media screen and (min-width: 1441px) and (max-width: 1680px) {
+  .truth-transparency .last_quote {
+    margin-top: -300px !important; } }
 
 .science hr {
   background-image: url(../../textures/DigiAR_2019_purple-texture.svg);
   background-repeat: no-repeat;
   background-size: cover; }
+@media screen and (min-width: 1259px) and (max-width: 1440px) {
+  .science .first_quote {
+    top: 20px !important; } }
+@media screen and (min-width: 1259px) and (max-width: 1440px) {
+  .science .last_quote {
+    margin-top: -400px !important; } }
+@media screen and (min-width: 1441px) and (max-width: 1680px) {
+  .science .last_quote {
+    margin-top: -450px !important; } }
 
 .educating-youth hr {
   background-image: url(../../textures/DigiAR_2019_orange-texture.svg);
   background-repeat: no-repeat;
   background-size: cover; }
+@media screen and (min-width: 1259px) and (max-width: 1440px) {
+  .educating-youth .first_quote {
+    top: 50px !important; } }
+@media screen and (min-width: 1259px) and (max-width: 1440px) {
+  .educating-youth .last_quote {
+    margin-top: -300px !important; } }
+@media screen and (min-width: 1441px) and (max-width: 1680px) {
+  .educating-youth .last_quote {
+    margin-top: -350px !important; } }
 
 .town-square hr {
   background-image: url(../../textures/DigiAR_2019_teal-texture.svg);
   background-repeat: no-repeat;
   background-size: cover; }
+@media screen and (min-width: 1259px) and (max-width: 1440px) {
+  .town-square .first_quote {
+    top: 50px !important; } }
+@media screen and (min-width: 1259px) and (max-width: 1440px) {
+  .town-square .last_quote {
+    margin-top: -400px !important; } }
+@media screen and (min-width: 1441px) and (max-width: 1680px) {
+  .town-square .last_quote {
+    margin-top: -500px !important; } }
 
 /* ------------------------------- */
 /*        SLICK DOTS               */
@@ -989,14 +1036,12 @@ body {
       padding: 0;
       border: none;
       background: none;
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
       text-indent: -9999px;
       margin: auto 20px;
       border-radius: 100%;
-      background-color: white;
-      border: 1px solid black;
-      opacity: 0.8; }
+      background-color: white; }
 
 /* ------------------------------- */
 /*        Archor Links 2           */
