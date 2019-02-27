@@ -384,7 +384,8 @@ nav {
     display: none;
     cursor: pointer; }
     nav .mobile_button * {
-      transition: all 0.1s; }
+      transition: all 0.6s;
+      top: 0; }
     @media only screen and (max-width: 700px) {
       nav .mobile_button {
         display: block;
@@ -396,7 +397,9 @@ nav {
           width: 45px;
           height: 4px;
           background-color: white;
-          margin: 6px auto; } }
+          margin: 6px auto; }
+        nav .mobile_button .bar2 {
+          transition: all 0.2s; } }
   nav .nav-items-container {
     position: relative;
     top: 0;
@@ -440,16 +443,14 @@ nav {
 
 .mobile_button_clicked .bar_container * {
   position: relative;
-  margin: -3.5px 0px !important;
-  -webkit-transform: rotateZ(45deg);
-  -moz-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
-  box-shadow: 0px 1px 1px white; }
+  top: -5px; }
+.mobile_button_clicked .bar_container .bar2 {
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%; }
 .mobile_button_clicked .bar_container .bar3 {
-  -webkit-transform: rotateZ(-45deg);
-  -moz-transform: rotateZ(-45deg);
-  transform: rotateZ(-45deg);
-  box-shadow: 0px -1px 1px white; }
+  top: 5px; }
 
 /* Scss Code starts here */
 main {
