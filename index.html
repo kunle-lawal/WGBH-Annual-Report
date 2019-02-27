@@ -71,8 +71,8 @@
         </div>
 
         <!-- President's Message -->
-        <a name="pres" id="pres"></a>
         <section class="presmsg">
+            <a name="pres" id="pres"></a>
             <div class="sub-section">
                 <div class="wrapper">
                     <div class="presmsg-left">
@@ -785,37 +785,6 @@
     <script src="assets/slick/slick.min.js"></script>
 
     <!-- SMOOTH SCROLLING SCRIPT -->
-    <script>
-        $(document).ready(function () {
-            var clicked = true;
-            // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "" && clicked) {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-                    
-                    // Store hash
-                    var hash = this.hash;
-                    if($(hash).offset().top == $("html").scrollTop()) {
-                        return;
-                    }
-                    // console.log($(hash).offset().top, $("html").scrollTop());
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    clicked = false
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top,
-                    }, 800, function () {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                        clicked = true;
-                    });
-                } // End if
-            });
-        });
-    </script>
 </body>
 
 </html>
