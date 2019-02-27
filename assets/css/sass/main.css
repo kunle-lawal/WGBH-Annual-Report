@@ -465,9 +465,9 @@ body {
 /* Hero */
 @-webkit-keyframes slide {
   from {
-    background-position: 0 -167vw; }
+    background-position: 0 0; }
   to {
-    background-position: 0px 0%; } }
+    background-position: 0px -167vw; } }
 .hero {
   width: 100%;
   height: 100vh; }
