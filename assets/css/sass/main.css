@@ -392,7 +392,7 @@ nav {
         margin-left: 70%;
         text-align: center;
         justify-self: center; }
-        nav .mobile_button div {
+        nav .mobile_button .bar {
           width: 45px;
           height: 4px;
           background-color: white;
@@ -438,15 +438,16 @@ nav {
 .slideInDown {
   top: 0 !important; }
 
-.mobile_button_clicked * {
+.mobile_button_clicked .bar_container * {
   position: relative;
-  margin: -3.5px 0px !important; }
-.mobile_button_clicked .bar1 {
+  margin: -3.5px 0px !important;
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
   transform: rotateZ(45deg);
   box-shadow: 0px 1px 1px white; }
-.mobile_button_clicked .bar2 {
-  transform: rotateZ(45deg); }
-.mobile_button_clicked .bar3 {
+.mobile_button_clicked .bar_container .bar3 {
+  -webkit-transform: rotateZ(-45deg);
+  -moz-transform: rotateZ(-45deg);
   transform: rotateZ(-45deg);
   box-shadow: 0px -1px 1px white; }
 
