@@ -197,8 +197,21 @@ p {
       font-size: 35pt;
       line-height: 47.25pt; } }
 
+.truth-transparency a {
+  color: #ff4a00; }
+
+.science a {
+  color: #6e3078; }
+
+.educating-youth a {
+  color: #f7922a; }
+
+.town-square a {
+  color: #20b5bf; }
+
 em {
-  font-style: italic; }
+  font-style: italic;
+  text-transform: capitalize; }
 
 nav {
   font-family: "Work Sans Bold", sans-serif;
