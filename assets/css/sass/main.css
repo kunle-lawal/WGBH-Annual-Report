@@ -1210,9 +1210,11 @@ body {
 
 @supports (-ms-ime-align: auto) {
   /* IE Edge 16+ CSS */
+  body {
+    overflow-x: hidden; }
+
   .hero-curtain {
-    -webkit-animation: initial;
-    animation: initial; }
+    display: none; }
 
   .logo_farm .wrapper .logos {
     display: grid;
