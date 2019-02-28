@@ -30,7 +30,7 @@
             }
 
             // console.log(scroll_element.scrollTop(), articlePos[0]);
-            if (document.scrollingElement.scrollTop > getOffSetVal(".logo_farm")) {
+            if (document.scrollingElement.scrollTop >= getOffSetVal(".logo_farm") - 100) {
                 $("nav").css({
                     "background-color": "#222222",
                     "color": "white"
@@ -40,22 +40,22 @@
                     "background-color": "#03507c",
                     "color": "white"
                 });
-            } else if (document.scrollingElement.scrollTop > articlePos[3]) {
+            } else if (document.scrollingElement.scrollTop > articlePos[3] - 100) {
                 $("nav").css({
                     "background-color": "#20b5bf",
                     "color": "#white"
                 });
-            } else if (document.scrollingElement.scrollTop > articlePos[2]) {
+            } else if (document.scrollingElement.scrollTop > articlePos[2] - 100) {
                 $("nav").css({
                     "background-color": "#f7922a",
                     "color": "#ffffff"
                 });
-            } else if (document.scrollingElement.scrollTop > articlePos[1]) {
+            } else if (document.scrollingElement.scrollTop > articlePos[1] - 100) {
                 $("nav").css({
                     "background-color": "#6e3078",
                     "color": "white"
                 });
-            } else if (document.scrollingElement.scrollTop > articlePos[0]) {
+            } else if (document.scrollingElement.scrollTop > articlePos[0] - 100) {
                 $("nav").css({
                     "background-color": "#d83300",
                     "color": "white"
