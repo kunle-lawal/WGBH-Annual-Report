@@ -249,7 +249,7 @@ nav {
     nav {
       font-size: 1.4vw; } }
 
-.hero-card .card-item p {
+.hero-window .hero-card .card-item p {
   font-family: "Work Sans Bold", sans-serif;
   font-size: 20pt;
   line-height: 32pt; }
@@ -265,12 +265,12 @@ nav {
     .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
       font-size: 25pt; } }
 
-.footer, .footer .wrapper .footer-item, .hero-card, .headline .article .section-article-item .first_quote, .headline .article .section-article-item .second_quote, .headline .article .section-article-item .last_quote {
+.footer, .footer .wrapper .footer-item, .hero-window .hero-card, .headline .article .section-article-item .first_quote, .headline .article .section-article-item .second_quote, .headline .article .section-article-item .last_quote {
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.hero-curtain, .hero-card {
+.hero-curtain, .hero-window .hero-card {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -556,35 +556,40 @@ body {
     height: 100%;
     position: fixed;
     top: 0; }
-  .hero-card {
-    flex-direction: column;
-    width: 500px;
-    min-height: 250px;
-    padding: 70px;
-    color: lighblue;
-    background-color: white; }
-    @media only screen and (min-width: 701px) and (max-width: 1257px) {
-      .hero-card {
-        min-width: 20%; } }
-    @media only screen and (max-width: 700px) {
-      .hero-card {
-        width: 60%; } }
-    .hero-card .card-item {
-      margin: 10px auto;
-      min-width: 400px; }
-      .hero-card .card-item h1 {
-        letter-spacing: 10px;
-        text-align: center;
-        width: 100%; }
-      .hero-card .card-item p {
-        font-weight: 900;
-        text-align: center;
-        width: 100%; }
-    .hero-card .quote {
-      /* Person Quoted */ }
-      .hero-card .quote span {
-        float: right; }
+    .hero-window .hero-card {
+      flex-direction: column;
+      width: 500px;
+      min-height: 250px;
+      padding: 70px;
+      color: lighblue;
+      background-color: white; }
+      @media only screen and (min-width: 701px) and (max-width: 1257px) {
+        .hero-window .hero-card {
+          min-width: 20%; } }
+      @media only screen and (max-width: 700px) {
+        .hero-window .hero-card {
+          width: 60%; } }
+      .hero-window .hero-card .card-item {
+        margin: 10px auto;
+        min-width: 400px; }
+        .hero-window .hero-card .card-item h1 {
+          letter-spacing: 10px;
+          text-align: center;
+          width: 100%; }
+        .hero-window .hero-card .card-item p {
+          font-weight: 900;
+          text-align: center;
+          width: 100%; }
+      .hero-window .hero-card .quote {
+        /* Person Quoted */ }
+        .hero-window .hero-card .quote span {
+          float: right; }
 
+@supports (-ms-ime-align: auto) {
+  /* IE Edge 16+ CSS */
+  .hero-curtain {
+    -webkit-animation: initial;
+    animation: initial; } }
 /* Presidents Message */
 @media only screen and (max-width: 700px) {
   .presmsg {
