@@ -380,13 +380,6 @@ nav {
     nav {
       height: 100px;
       display: block; } }
-  @media only screen and (max-width: 700px) and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    nav {
-      height: 70px; } }
-  @media only screen and (max-width: 700px) and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    nav {
-      height: 70px; } }
-
   nav .mobile_nav {
     min-width: 10px;
     margin: auto 0;
@@ -531,23 +524,25 @@ body {
         background-position: center center;
         background-size: cover;
         width: 100vw; } }
-  @media only screen and (max-width: 700px) and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    .hero-curtain {
-      -webkit-animation: slide 10s linear infinite;
-      animation: slide 30s linear infinite;
-      background-image: url(../../images/WGBH_AnnualReportCOVER.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: inherit; } }
-  @media only screen and (max-width: 700px) and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-    .hero-curtain {
-      -webkit-animation: slide 10s linear infinite;
-      animation: slide 30s linear infinite;
-      background-image: url(../../images/WGBH_AnnualReportCOVER.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: inherit; } }
-
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+      .hero-curtain {
+        animation: initial;
+        background-position: 0 -100px;
+        background-image: url(../../images/WGBH_AnnualReportCOVER.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: inherit; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+      .hero-curtain {
+        background-position: bottom; } }
+    @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+      .hero-curtain {
+        animation: initial;
+        background-position: bottom;
+        background-image: url(../../images/WGBH_AnnualReportCOVER.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: inherit; } }
   .hero-window {
     background-image: url(../../images/DigiAR-2019_Intro-Bground_v1.png);
     background-repeat: no-repeat;
@@ -571,7 +566,7 @@ body {
           width: 60%; } }
       .hero-window .hero-card .card-item {
         margin: 10px auto;
-        min-width: 400px; }
+        min-width: 10px; }
         .hero-window .hero-card .card-item h1 {
           letter-spacing: 10px;
           text-align: center;
