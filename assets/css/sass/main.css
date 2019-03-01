@@ -153,8 +153,8 @@ h1 {
   -webkit-font-smoothing: antialiased; }
   @media only screen and (max-width: 700px) {
     h1 {
-      font-size: 50px;
-      line-height: 54.1666666667px; } }
+      font-size: 20px;
+      line-height: 21.6666666667px; } }
 
 h2 {
   font-family: "Work Sans Bold", sans-serif;
@@ -170,6 +170,10 @@ h2 {
     h2 {
       font-size: 35.7142857143pt;
       line-height: 39.2857142857pt; } }
+  @media only screen and (max-width: 700px) {
+    h2 {
+      font-size: 27.7777777778pt;
+      line-height: 30.5555555556pt; } }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     h2 {
       font-size: 35.7142857143pt;
@@ -190,7 +194,8 @@ h3 {
       font-size: 16.6666666667pt; } }
   @media only screen and (max-width: 700px) {
     h3 {
-      font-size: 13.3333333333pt; } }
+      font-size: 14.2857142857pt;
+      line-height: 19.2857142857pt; } }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     h3 {
       font-size: 20pt;
@@ -208,10 +213,6 @@ p {
   @media screen and (min-width: 1259px) and (max-width: 1440px) {
     p {
       font-size: 16.6666666667pt; } }
-  @media only screen and (max-width: 700px) {
-    p {
-      font-size: 35pt;
-      line-height: 47.25pt; } }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     p {
       font-size: 20pt;
@@ -253,6 +254,10 @@ nav {
   font-family: "Work Sans Bold", sans-serif;
   font-size: 20pt;
   line-height: 32pt; }
+  @media only screen and (max-width: 700px) {
+    .hero-window .hero-card .card-item p {
+      font-size: 11pt;
+      line-height: 18pt; } }
 
 .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
   font-family: "Work Sans Bold", sans-serif;
@@ -264,6 +269,9 @@ nav {
   @media only screen and (min-width: 701px) and (max-width: 1257px) {
     .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
       font-size: 25pt; } }
+  @media only screen and (max-width: 700px) {
+    .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
+      font-size: 8vw; } }
 
 .footer, .footer .wrapper .footer-item, .hero-window .hero-card, .headline .article .section-article-item .first_quote, .headline .article .section-article-item .second_quote, .headline .article .section-article-item .last_quote {
   display: flex;
@@ -289,6 +297,7 @@ nav {
   min-height: 200px;
   background-color: whitesmoke; }
   .footer .wrapper {
+    width: 95%;
     margin-top: 10px;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr; }
@@ -317,7 +326,9 @@ nav {
             display: inline-block; }
             @media only screen and (max-width: 700px) {
               .footer .wrapper .footer-item .info .logos img {
-                margin: auto 5px; } }
+                margin: auto 5px;
+                height: 50px;
+                width: 50px; } }
       .footer .wrapper .footer-item .credit {
         text-align: left; }
         @media only screen and (max-width: 700px) {
@@ -331,6 +342,9 @@ nav {
         .footer .wrapper .footer-item .visit img {
           width: 250px;
           margin-top: 28px; }
+          @media only screen and (max-width: 700px) {
+            .footer .wrapper .footer-item .visit img {
+              width: 150px; } }
       .footer .wrapper .footer-item .social {
         display: inline-block; }
         .footer .wrapper .footer-item .social .social-media {
@@ -378,7 +392,7 @@ nav {
   display: flex; }
   @media only screen and (max-width: 700px) {
     nav {
-      height: 100px;
+      height: 60px;
       display: block; } }
   nav .mobile_nav {
     min-width: 10px;
@@ -406,8 +420,7 @@ nav {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        right: 140px;
-        font-size: 18px !important; } }
+        font-size: 3.4vw !important; } }
   nav .mobile_button {
     display: none;
     cursor: pointer;
@@ -486,7 +499,7 @@ main {
   display: block; }
 
 section {
-  width: 100%;
+  min-width: 10px;
   min-height: 1000px;
   text-align: center; }
 
@@ -563,18 +576,27 @@ body {
           min-width: 20%; } }
       @media only screen and (max-width: 700px) {
         .hero-window .hero-card {
-          width: 60%; } }
+          width: 90vw;
+          min-height: 20px;
+          padding: 30px 0px; } }
       .hero-window .hero-card .card-item {
         margin: 10px auto;
-        min-width: 10px; }
+        min-width: 10px;
+        text-align: center; }
+        @media only screen and (max-width: 700px) {
+          .hero-window .hero-card .card-item {
+            width: 80%; } }
         .hero-window .hero-card .card-item h1 {
           letter-spacing: 10px;
           text-align: center;
-          width: 100%; }
+          display: inline-block; }
         .hero-window .hero-card .card-item p {
           font-weight: 900;
           text-align: center;
           width: 100%; }
+          @media only screen and (max-width: 700px) {
+            .hero-window .hero-card .card-item p {
+              display: inline-block; } }
       .hero-window .hero-card .quote {
         /* Person Quoted */ }
         .hero-window .hero-card .quote span {
@@ -704,7 +726,7 @@ body {
           width: 90%; } }
       .presmsg-right .signitures .signiture * {
         text-align: left;
-        font-size: 16pt; }
+        font-size: 16px; }
         @media only screen and (max-width: 700px) {
           .presmsg-right .signitures .signiture * {
             font-size: 35px; } }
@@ -718,7 +740,7 @@ body {
       height: 100px; }
       @media only screen and (max-width: 700px) {
         .presmsg-right .signitures-left img {
-          height: 200px; } }
+          height: 130px; } }
     .presmsg-right .signitures-right img {
       background-size: contain;
       background-repeat: no-repeat;
@@ -731,7 +753,7 @@ body {
       @media only screen and (max-width: 700px) {
         .presmsg-right .signitures-right img {
           height: 200px;
-          width: 400px; } }
+          width: 240px; } }
 
 /* anchor Links*/
 .anchor_links {
@@ -789,7 +811,6 @@ body {
           color: white; }
           @media only screen and (max-width: 700px) {
             .anchor_links .wrapper .links .link h3 {
-              font-size: calc(20pt * 2);
               font-weight: 500;
               width: 70%; } }
         @media only screen and (min-width: 701px) and (max-width: 1257px) {
@@ -947,7 +968,7 @@ body {
               .headline .article .section-article-item .second_quote {
                 display: block;
                 position: initial;
-                margin-bottom: -150px;
+                margin-bottom: -50px;
                 margin-left: 0;
                 margin-top: 40px;
                 width: 100%; } }
@@ -1110,7 +1131,7 @@ body {
       .wgbh_overview .title {
         display: inline-block;
         color: white;
-        width: 50%; } }
+        width: 80%; } }
   .wgbh_overview .wrapper {
     text-align: center;
     justify-items: center;
@@ -1152,9 +1173,6 @@ body {
           @media only screen and (min-width: 701px) and (max-width: 1257px) {
             .wgbh_overview .wrapper .links .overview-link h3 {
               font-size: 23px; } }
-          @media only screen and (max-width: 700px) {
-            .wgbh_overview .wrapper .links .overview-link h3 {
-              font-size: calc(20pt * 2); } }
         @media only screen and (max-width: 700px) {
           .wgbh_overview .wrapper .links .overview-link {
             margin: 40px auto;
@@ -1218,6 +1236,18 @@ body {
     grid-auto-columns: auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px; } }
+@-moz-document url-prefix() {
+  @media only screen and (max-width: 700px) {
+    body {
+      overflow-x: hidden; } }
+
+  @media only screen and (max-width: 700px) {
+    h3 {
+      font-size: 16pt !important; } }
+
+  @media only screen and (max-width: 700px) {
+    h2 {
+      font-size: 34px; } } }
 /*h1 {
     font-size: 70px;
     position: relative;
