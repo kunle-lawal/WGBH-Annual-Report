@@ -235,13 +235,12 @@ p {
   color: #20b5bf; }
 
 em {
-  font-style: italic;
-  text-transform: capitalize; }
+  font-style: italic; }
 
 nav {
   font-family: "Work Sans Bold", sans-serif;
   letter-spacing: 1px;
-  font-size: 18pt;
+  font-size: 15pt;
   line-height: 55px; }
   @media screen and (min-width: 1259px) and (max-width: 1440px) {
     nav {
@@ -262,7 +261,7 @@ nav {
 .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
   font-family: "Work Sans Bold", sans-serif;
   font-size: 25pt;
-  line-height: 40pt; }
+  line-height: 30pt; }
   @media screen and (min-width: 1259px) and (max-width: 1440px) {
     .anchor_links .wrapper .links .link h3, .wgbh_overview .wrapper .links .overview-link, .wgbh_overview .wrapper .links .overview-link h3 {
       font-size: 20pt; } }
@@ -384,7 +383,7 @@ nav {
   box-shadow: 1px 1px 10px #0a090942;
   background-color: #222;
   width: 100%;
-  height: 100px;
+  height: 65px;
   z-index: 3;
   position: fixed;
   transition: background-color 0.7s;
@@ -392,7 +391,7 @@ nav {
   display: flex; }
   @media only screen and (max-width: 700px) {
     nav {
-      height: 60px;
+      height: 40px;
       display: block; } }
   nav .mobile_nav {
     min-width: 10px;
@@ -415,10 +414,12 @@ nav {
       text-decoration: none; }
     @media only screen and (max-width: 700px) {
       nav .nav-title {
+        float: left;
         width: initial;
         min-width: 6px;
         position: relative;
         top: 50%;
+        left: 20px;
         transform: translateY(-50%);
         font-size: 3.4vw !important; } }
   nav .mobile_button {
@@ -427,10 +428,10 @@ nav {
     float: right;
     position: relative;
     top: 50%;
-    right: 30px;
+    right: 10px;
     transform: translateY(-50%); }
     nav .mobile_button * {
-      transition: all 0.6s;
+      transition: all 0.2s;
       top: 0; }
     @media only screen and (max-width: 700px) {
       nav .mobile_button {
@@ -438,8 +439,8 @@ nav {
         display: inline-block;
         text-align: center; }
         nav .mobile_button .bar {
-          width: 45px;
-          height: 4px;
+          width: 25px;
+          height: 2px;
           background-color: white;
           margin: 6px auto; }
         nav .mobile_button .bar2 {
@@ -462,7 +463,7 @@ nav {
         text-align: center;
         background-color: inherit;
         margin: auto;
-        transition: all 0.6s;
+        transition: all 0.2s;
         opacity: 0.97; } }
     nav .nav-items-container ul {
       width: 100%;
@@ -471,28 +472,31 @@ nav {
       @media only screen and (max-width: 700px) {
         nav .nav-items-container ul {
           display: block;
-          font-size: 20px;
-          line-height: 90px; } }
+          font-size: 15px;
+          line-height: 60px; } }
       nav .nav-items-container ul li {
         display: inline-block;
         cursor: pointer;
-        margin: auto 30px; }
+        margin: auto 30px;
+        transition: all 0.5s;
+        top: 0px; }
+        nav .nav-items-container ul li:hover {
+          position: relative;
+          top: 5px;
+          opacity: 0.8; }
         @media only screen and (max-width: 700px) {
           nav .nav-items-container ul li {
             display: block; } }
 
 /*CSS ANIMATIONS*/
 .slideInDown {
-  top: 0 !important; }
+  top: -21px !important; }
 
 .mobile_button_clicked .bar_container * {
   position: relative;
-  top: -5px; }
+  top: -3px; }
 .mobile_button_clicked .bar_container .bar2 {
-  top: 0px;
-  width: 0px; }
-.mobile_button_clicked .bar_container .bar3 {
-  top: 5px; }
+  top: 3px; }
 
 /* Scss Code starts here */
 main {
@@ -648,7 +652,6 @@ body {
       height: 25px;
       background-color: #4765aa;
       margin-top: 10px;
-      z-index: -1;
       background-image: url(../../textures/DigiAR_2019_blue-texture-copy.svg);
       background-repeat: no-repeat;
       background-size: cover; }
@@ -723,13 +726,14 @@ body {
       @media only screen and (max-width: 700px) {
         .presmsg-right .signitures .signiture {
           display: inline-block;
-          width: 90%; } }
+          width: 100%; } }
       .presmsg-right .signitures .signiture * {
         text-align: left;
         font-size: 16px; }
         @media only screen and (max-width: 700px) {
           .presmsg-right .signitures .signiture * {
-            font-size: 35px; } }
+            font-size: 25px;
+            line-height: 30px; } }
       .presmsg-right .signitures .signiture p {
         color: #236092;
         font-family: "Work Sans Bold", sans-serif; }
@@ -752,7 +756,7 @@ body {
           width: 200px; } }
       @media only screen and (max-width: 700px) {
         .presmsg-right .signitures-right img {
-          height: 200px;
+          height: 100px;
           width: 240px; } }
 
 /* anchor Links*/
@@ -801,13 +805,15 @@ body {
         background-size: cover;
         text-align: center;
         vertical-align: middle;
-        line-height: 220px;
+        line-height: 150px;
         padding: 20px;
         border-radius: 40px; }
+        @media only screen and (max-width: 700px) {
+          .anchor_links .wrapper .links .link {
+            padding: 20px 0; } }
         .anchor_links .wrapper .links .link h3 {
           display: inline-block;
           vertical-align: middle;
-          line-height: normal;
           color: white; }
           @media only screen and (max-width: 700px) {
             .anchor_links .wrapper .links .link h3 {
@@ -992,7 +998,7 @@ body {
               width: 100%; }
           .headline .article .section-article-item .last_quote {
             display: block;
-            margin-top: -400px;
+            margin-top: -350px;
             margin-left: 630px; }
             @media screen and (min-width: 1259px) and (max-width: 1440px) {
               .headline .article .section-article-item .last_quote {
@@ -1088,7 +1094,7 @@ body {
     top: 120px !important; } }
 @media screen and (min-width: 1259px) and (max-width: 1440px) {
   .town-square .last_quote {
-    margin-top: -300px !important; } }
+    margin-top: -350px !important; } }
 @media screen and (min-width: 1441px) and (max-width: 1680px) {
   .town-square .last_quote {
     margin-top: -400px !important; } }
@@ -1162,14 +1168,13 @@ body {
         min-width: 10px;
         text-align: center;
         vertical-align: middle;
-        line-height: 220px;
+        line-height: 150px;
         padding: 20px;
         background-color: white;
         border-radius: 40px; }
         .wgbh_overview .wrapper .links .overview-link h3 {
           display: inline-block;
-          vertical-align: middle;
-          line-height: normal; }
+          vertical-align: middle; }
           @media only screen and (min-width: 701px) and (max-width: 1257px) {
             .wgbh_overview .wrapper .links .overview-link h3 {
               font-size: 23px; } }
