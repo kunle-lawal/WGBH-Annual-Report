@@ -18,9 +18,7 @@
 
         var scroll_element =  $("html");
         var curtain_height = $(".hero-window").height();
-        var articlePos = [getOffSetVal(".truth-transparency"), getOffSetVal(".science"), getOffSetVal(".educating-youth"), getOffSetVal(".town-square")];
         
-
         $(".article-slides").slick({
             dots: true,
             prevArrow: false,
@@ -91,10 +89,9 @@
                 } else if (hash == "#financial") {
                     animateScroll("#wgbh_overview-7", 0);
                     console.log("dasfksfkdnf");
-                } else if(hash != "#window") {
-                    $('html, body').animate({
-                        scrollTop: 1000,
-                    });
+                } else if (hash == "#window") {
+                    animateScroll(hash, (-curtain_height));
+                    console.log("dasfksfkdnf");
                 } else {
                     animateScroll(hash, 0);
                 }
@@ -107,6 +104,8 @@
 
             // console.log(articlePos);
             // console.log(curtain_height);
+            var articlePos = [getOffSetVal(".truth-transparency"), getOffSetVal(".science"), getOffSetVal(".educating-youth"), getOffSetVal(".town-square")];
+            
             if (document.scrollingElement.scrollTop >= curtain_height){
                 $(".hero-window").css({
                     "position": "relative",
@@ -130,7 +129,7 @@
                 });
             }
 
-            console.log(scroll_element.scrollTop());
+            console.log(scroll_element.scrollTop(), articlePos[0]);
             if (document.scrollingElement.scrollTop >= getOffSetVal(".logo_farm") - 100) {
                 $("nav").css({
                     "background-color": "#222222",
@@ -161,7 +160,7 @@
                     "background-color": "#d83300",
                     "color": "white"
                 });
-            } else if (document.scrollingElement.scrollTop > getOffSetVal(".link")) {
+            } else if (document.scrollingElement.scrollTop > getOffSetVal("#anchor_links-2")) {
                 $("nav").css({
                     "background-color": "#222222",
                     "color": "white"
