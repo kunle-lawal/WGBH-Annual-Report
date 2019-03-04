@@ -516,6 +516,57 @@ body {
     background-position: 0 0; }
   to {
     background-position: 0px -167vw; } }
+.scroll-down {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  display: block;
+  text-align: center;
+  width: 23px;
+  height: 23px;
+  border-bottom: 5px solid #ffffff;
+  border-right: 5px solid #ffffff;
+  z-index: 9;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: move_down 1.4s ease-in-out infinite;
+  -moz-animation: move_down 1.4s ease-in-out infinite;
+  animation: move_down 1.4s ease-in-out infinite;
+  cursor: pointer; }
+  .scroll-down:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    animation-play-state: paused; }
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes move_down {
+  0% {
+    top: 80%; }
+  50% {
+    top: 90%; }
+  100% {
+    top: 80%; } }
+@-moz-keyframes move_down {
+  0% {
+    top: 80%; }
+  50% {
+    top: 90%; }
+  100% {
+    top: 80%; } }
+@keyframes move_down {
+  0% {
+    top: 80%;
+    width: 30px;
+    height: 30px; }
+  50% {
+    top: 83%;
+    width: 25px;
+    height: 25px; }
+  100% {
+    top: 80%;
+    width: 30px;
+    height: 30px; } }
 .hero {
   width: 100%;
   height: 100vh; }
@@ -1256,30 +1307,5 @@ body {
   @media only screen and (max-width: 700px) {
     h2 {
       font-size: 34px; } } }
-/*h1 {
-    font-size: 70px;
-    position: relative;
-}
-
-div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-
-    div {
-        content: "lorem";
-        width: 80%;
-        height: 600px;
-        @include test-borders(black);
-        background-color: white;
-    }
-
-    p {
-        @include test-borders(black);
-        padding: 50px;
-        line-height: 50px;
-        text-align: center;
-    }
-}*/
 
 /*# sourceMappingURL=main.css.map */
