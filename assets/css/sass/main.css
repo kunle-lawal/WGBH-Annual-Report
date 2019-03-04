@@ -1145,7 +1145,7 @@ body {
     top: 120px !important; } }
 @media screen and (min-width: 1259px) and (max-width: 1440px) {
   .town-square .last_quote {
-    margin-top: -350px !important; } }
+    margin-top: -300px !important; } }
 @media screen and (min-width: 1441px) and (max-width: 1680px) {
   .town-square .last_quote {
     margin-top: -400px !important; } }

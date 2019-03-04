@@ -66,10 +66,11 @@
 
                 // Store hash
                 var hash = this.hash;
-                console.log(hash);
+                console.log($(hash).offset().top);
                 if ($(hash).offset().top == $("html").scrollTop()) {
                     return;
                 }
+                
                 // console.log($(hash).offset().top, $("html").scrollTop());
                 // Using jQuery's animate() method to add smooth page scroll
                 // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
@@ -90,7 +91,13 @@
                     animateScroll("#wgbh_overview-7", 0);
                     console.log("dasfksfkdnf");
                 } else if (hash == "#window") {
-                    animateScroll(hash, (-curtain_height));
+                    $('html, body').animate({
+                        scrollTop: curtain_height,
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        clicked = true;
+                    });
                     console.log("dasfksfkdnf");
                 } else {
                     animateScroll(hash, 0);
@@ -105,7 +112,7 @@
             // console.log(articlePos);
             // console.log(curtain_height);
             var articlePos = [getOffSetVal(".truth-transparency"), getOffSetVal(".science"), getOffSetVal(".educating-youth"), getOffSetVal(".town-square")];
-            
+
             if (document.scrollingElement.scrollTop >= curtain_height){
                 $(".hero-window").css({
                     "position": "relative",
