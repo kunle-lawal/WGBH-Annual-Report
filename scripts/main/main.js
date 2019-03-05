@@ -10,7 +10,7 @@
             }, 800, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
-                // window.location.hash = hash;
+                window.location.hash = hash;
                 clicked = true;
             });
         }
@@ -83,10 +83,8 @@
                     animateScroll("#wgbh_overview-7", 0);
                 } else if (hash == "#window") {
                     $('html, body').animate({
-                        scrollTop: curtain_height,
+                        scrollTop: curtain_height + 0,
                     }, 800, function () {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
                         clicked = true;
                     });
                 } else {
