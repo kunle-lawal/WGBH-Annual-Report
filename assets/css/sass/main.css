@@ -520,8 +520,6 @@ body {
   position: absolute;
   top: 80%;
   left: 50%;
-  display: block;
-  text-align: center;
   width: 23px;
   height: 23px;
   border-bottom: 5px solid #ffffff;
@@ -618,7 +616,8 @@ body {
     width: inherit;
     height: 100%;
     position: fixed;
-    top: 0; }
+    top: 0;
+    z-index: 1; }
     .hero-window .hero-card {
       flex-direction: column;
       width: 500px;
@@ -780,7 +779,7 @@ body {
           width: 100%; } }
       .presmsg-right .signitures .signiture * {
         text-align: left;
-        font-size: 16px; }
+        font-size: 18px; }
         @media only screen and (max-width: 700px) {
           .presmsg-right .signitures .signiture * {
             font-size: 25px;
@@ -872,7 +871,8 @@ body {
               width: 70%; } }
         @media only screen and (min-width: 701px) and (max-width: 1257px) {
           .anchor_links .wrapper .links .link {
-            height: 220px; } }
+            height: 220px;
+            line-height: 220px; } }
         @media only screen and (max-width: 700px) {
           .anchor_links .wrapper .links .link {
             border-radius: 0px; } }

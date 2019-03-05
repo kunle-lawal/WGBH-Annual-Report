@@ -5,13 +5,12 @@
         }
 
         animateScroll = function (hash, offset) {
-            console.log($(hash).offset().top);
             $('html, body').animate({
                 scrollTop: $(hash).offset().top + offset,
             }, 800, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
+                // window.location.hash = hash;
                 clicked = true;
             });
         }
@@ -58,7 +57,6 @@
 
 
         $("a").on('click', function (event) {
-            console.log(clicked);
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "" && clicked) {
                 // Prevent default anchor click behavior
@@ -66,30 +64,23 @@
 
                 // Store hash
                 var hash = this.hash;
-                console.log($(hash).offset().top);
                 if ($(hash).offset().top == $("html").scrollTop()) {
                     return;
                 }
                 
-                // console.log($(hash).offset().top, $("html").scrollTop());
                 // Using jQuery's animate() method to add smooth page scroll
                 // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                 clicked = false
-                // console.log(hash);
                 if (hash == "#pres") {
-                    console.log(document.scrollingElement.scrollTop, $('.hero-curtain').height())
                     if (document.scrollingElement.scrollTop >= $('.hero-curtain').height()) {
                         animateScroll(".presmsg", -100);
                     } else {
                         animateScroll(".presmsg", (curtain_height - 100));
                     }
-                    console.log("pres");
                 } else if (hash == "#stories") {
                     animateScroll(".truth-transparency", 200);
-                    console.log("storieas");
                 } else if (hash == "#financial") {
                     animateScroll("#wgbh_overview-7", 0);
-                    console.log("dasfksfkdnf");
                 } else if (hash == "#window") {
                     $('html, body').animate({
                         scrollTop: curtain_height,
@@ -98,7 +89,6 @@
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         clicked = true;
                     });
-                    console.log("dasfksfkdnf");
                 } else {
                     animateScroll(hash, 0);
                 }
@@ -107,16 +97,11 @@
         });
 
         $(document).scroll(function(){
-            // console.log(scroll_element.scrollTop(), $(window).height());
-
-            // console.log(articlePos);
-            // console.log(curtain_height);
             var articlePos = [getOffSetVal(".truth-transparency"), getOffSetVal(".science"), getOffSetVal(".educating-youth"), getOffSetVal(".town-square")];
 
             if (document.scrollingElement.scrollTop >= curtain_height){
                 $(".hero-window").css({
                     "position": "relative",
-                    // "display": "block",
                     "margin-top": curtain_height
                 });
 
@@ -124,10 +109,8 @@
                     "margin-top": -curtain_height
                 });
             } else {
-                // alert(curtain_height);
                 $(".hero-window").css({
                     "position": "fixed",
-                    // "display": "none",
                     "margin-top": 0
                 });
 
@@ -136,7 +119,6 @@
                 });
             }
 
-            console.log(scroll_element.scrollTop(), articlePos[0]);
             if (document.scrollingElement.scrollTop >= getOffSetVal(".logo_farm") - 100) {
                 $("nav").css({
                     "background-color": "#222222",
