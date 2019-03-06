@@ -15,6 +15,33 @@
     <link rel="icon" type="image/png" href="assets/Logos/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" href="assets/Logos/favicon/favicon-16x16.png">
     <!-- Google Tag Manager -->
+    <script>
+        var BrowserDetect = {
+                init: function () {
+                    this.browser = this.searchString(this.dataBrowser) || "Other";
+                },
+                searchString: function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        var dataString = data[i].string;
+                        this.versionSearchString = data[i].subString;
+
+                        if (dataString.indexOf(data[i].subString) !== -1) {
+                            return data[i].identity;
+                        }
+                    }
+                },
+
+                dataBrowser: [
+                    { string: navigator.userAgent, subString: "MSIE", identity: "Explorer" },
+                    { string: navigator.userAgent, subString: "Trident", identity: "Explorer" },
+                ]
+            };
+
+            BrowserDetect.init();
+            if (BrowserDetect.browser == "Explorer") {
+                window.location.href = "https://wgbh.brightspotcdn.com/95/52/0ff8be7d43f397cb453f1997100a/wgbh-annualreport19-interior-lowres.pdf";
+            }
+    </script>
     <script>(function (w, d, s, l, i) {
         w[l] = w[l] || []; w[l].push({
             'gtm.start':
@@ -40,7 +67,7 @@
     <nav class="nav" style="color:white">
         <div class="mobile_nav">
             <div class="nav-title">
-                <a href="#top">WGBH ANNUAL REPORT 2019</a>
+                <a class="page_link" href="#top">WGBH ANNUAL REPORT 2019</a>
             </div>
             
             <div class="mobile_button">
@@ -52,13 +79,13 @@
         </div>
         <div class="nav-items-container">
             <ul class="nav-items">
-                <a href="#pres">
+                <a class="page_link" href="#pres">
                     <li>PRESIDENT'S MESSAGE</li>
                 </a>
-                <a href="#stories">
+                <a class="page_link" href="#stories">
                     <li>STORIES</li>
                 </a>
-                <a href="#financial">
+                <a class="page_link" href="#financial">
                     <li>FINANCIALS</li>
                 </a>
             </ul>
@@ -70,7 +97,7 @@
         <!-- This is section 1 -->
         <div class="hero">
             <div class="hero-curtain">
-                <a href="#window"><div class="scroll-down"></div></a>
+                <a class="page_link" href="#window"><div class="scroll-down"></div></a>
             </div>
             <div class="hero-window">
                 <div class="hero-card">
@@ -161,25 +188,25 @@
             <div class="wrapper">
                 <div class="links">
                     <!-- Make 4 of these elements -->
-                    <a href="#truth">
+                    <a class="page_link" href="#truth">
                         <div id="jour" class="link">
                             <h3>Truth and Transparency</h3>
                         </div>
                     </a>
 
-                    <a href="#science">
+                    <a class="page_link" href="#science">
                         <div id="edu" class="link">
                             <h3>Science in the Public Interest</h3>
                         </div>
                     </a>
 
-                    <a href="#education">
+                    <a class="page_link" href="#education">
                         <div id="sci" class="link">
                             <h3>Educating our Youngest Citizens</h3>
                         </div>
                     </a>
 
-                    <a href="#town">
+                    <a class="page_link" href="#town">
                         <div id="hist" class="link">
                             <h3>A Town Square</h3>
                         </div>
@@ -403,7 +430,7 @@
                                         a comprehensive pre-school program designed to encourage young children to explore the arts. We're transforming WGBH's
                                         original TV production <a target="_blank" href="http://peepandthebigwideworld.com/en/"><em>PEEP and the Big Wide World</em></a> with
                                         new digital resources. Our PEEP Family Science offers a 
-                                        <a target="_blank" href="http://peepandthebigwideworld.com/en/about"><em>series of free apps</em></a> in English and Spanish that combine animated stories with hands-on science activities that
+                                        <a target="_blank" href="http://peepandthebigwideworld.com/en/about/#act-4"><em>series of free apps</em></a> in English and Spanish that combine animated stories with hands-on science activities that
                                         encourage parents to engage with their children through simple science exploration. WGBH is working with partners in
                                         low-income areas throughout the country to support parents by pairing them with educators so that together they foster
                                         healthy learning and development.
@@ -674,7 +701,7 @@
                         <img src="assets/Logos/Logo Farm/ARDigi_2019_logo-farm_v1-UnderTheRadar.svg" alt="UnderTheRadar">
                     </a>
 
-                    <a target="_blank" href="http://www.capeandislands.org/#stream/0" class="brand  WCAI">
+                    <a target="_blank" href="https://www.capeandislands.org/#stream/0" class="brand  WCAI">
                         <img src="assets/Logos/Logo Farm/ARDigi_2019_logo-farm_v1-WCAI.svg" alt="WCAI">
                     </a>
 
