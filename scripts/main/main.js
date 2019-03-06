@@ -96,6 +96,7 @@
 
         $(document).scroll(function(){
             var articlePos = [getOffSetVal(".truth-transparency"), getOffSetVal(".science"), getOffSetVal(".educating-youth"), getOffSetVal(".town-square")];
+            curtain_height = $(".hero-window").height();
 
             if (document.scrollingElement.scrollTop >= curtain_height){
                 $(".hero-window").css({
