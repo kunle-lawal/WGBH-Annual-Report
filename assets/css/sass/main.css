@@ -316,6 +316,9 @@ nav {
         .footer .wrapper .footer-item {
           margin: 10px auto;
           border-right: none; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+        .footer .wrapper .footer-item {
+          border-right: initial; } }
       .footer .wrapper .footer-item .info {
         text-align: center;
         height: 130px;
@@ -352,11 +355,6 @@ nav {
             @media only screen and (min-width: 701px) and (max-width: 1257px) {
               .footer .wrapper .footer-item .info .logos img {
                 width: 8vw; } }
-            @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-              .footer .wrapper .footer-item .info .logos img {
-                margin: auto 5px;
-                height: 100px;
-                width: 100px; } }
       .footer .wrapper .footer-item .credit {
         text-align: left; }
         .footer .wrapper .footer-item .credit h3 {
