@@ -14,34 +14,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="assets/Logos/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" href="assets/Logos/favicon/favicon-16x16.png">
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/main/jquery.lazy.min.js"></script>
+    <script src="assets/slick/slick.min.js"></script>
     <!-- Google Tag Manager -->
-    <script>
-        var BrowserDetect = {
-                init: function () {
-                    this.browser = this.searchString(this.dataBrowser) || "Other";
-                },
-                searchString: function (data) {
-                    for (var i = 0; i < data.length; i++) {
-                        var dataString = data[i].string;
-                        this.versionSearchString = data[i].subString;
+    <style>
+        #ie {
+            z-index: 999;
+            width:100%;
+            height:100vh;
+            position: absolute;
+            background-color:wheat;
+            overflow: hidden;
+        }
 
-                        if (dataString.indexOf(data[i].subString) !== -1) {
-                            return data[i].identity;
-                        }
-                    }
-                },
-
-                dataBrowser: [
-                    { string: navigator.userAgent, subString: "MSIE", identity: "Explorer" },
-                    { string: navigator.userAgent, subString: "Trident", identity: "Explorer" },
-                ]
-            };
-
-            BrowserDetect.init();
-            if (BrowserDetect.browser == "Explorer") {
-                window.open("https://wgbh.brightspotcdn.com/95/52/0ff8be7d43f397cb453f1997100a/wgbh-annualreport19-interior-lowres.pdf");
-            }
-    </script>
+        #ie button {
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+            height: 100px;
+            width:80%;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
     <script>(function (w, d, s, l, i) {
         w[l] = w[l] || []; w[l].push({
             'gtm.start':
@@ -59,8 +60,47 @@
 </head>
 
 <body id="top">
+    <div id="ie" style="display:none">
+        <h1>Sorry your broswer is not supported. :(</h1>
+        <button id="ie-button" onclick="downloadPdf()">Click here to download the pdf</button>
+    </div>
+    <script>
+        var BrowserDetect = {
+            init: function () {
+                this.browser = this.searchString(this.dataBrowser) || "Other";
+            },
+            searchString: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    var dataString = data[i].string;
+                    this.versionSearchString = data[i].subString;
+
+                    if (dataString.indexOf(data[i].subString) !== -1) {
+                        return data[i].identity;
+                    }
+                }
+            },
+
+            dataBrowser: [
+                { string: navigator.userAgent, subString: "MSIE", identity: "Explorer" },
+                { string: navigator.userAgent, subString: "Trident", identity: "Explorer" },
+            ]
+        };
+
+        BrowserDetect.init();
+        if (BrowserDetect.browser == "Explorer") {
+            document.getElementById("top").style.overflow = "hidden";
+            document.getElementById("ie").style.display = "block";
+            $("#ie-button").click(function(){
+                downloadPdf();
+            });
+        }
+
+        function downloadPdf() {
+            window.location.href = "https://wgbh.brightspotcdn.com/95/52/0ff8be7d43f397cb453f1997100a/wgbh-annualreport19-interior-lowres.pdf";
+        }
+    </script>
     <!-- Google Tag Manager (noscript) -->
-    
+
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNM8SXB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <!-- End Google Tag Manager (noscript) -->
@@ -778,12 +818,7 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="scripts/main/main.js"></script>
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <script type="text/javascript" src="scripts/main/jquery.lazy.min.js"></script>
-    <script src="assets/slick/slick.min.js"></script>
 
     <!-- SMOOTH SCROLLING SCRIPT -->
 </body>
